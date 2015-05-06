@@ -37,13 +37,13 @@ body {
 
 #username {
 	margin: 45px 0 20px 0;
-	height: 45px;
+	height: 100%;
 	font-size: 150%;
 }
 
 #password {
 	margin: 0 0 20px 0;
-	height: 45px;
+	height: 100%;
 	font-size: 150%;
 }
 
