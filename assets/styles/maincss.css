@@ -19,20 +19,19 @@ body {
 
 #inlog {
 	background-color: white;
-	height: 320px;
 	opacity: 0.7;
 }
 
 #login-btn {
     font-size: 150%;
     line-height: normal;
-    width: 300px;
+    width: 93%;
     margin-bottom: 20px;
 }
 
 .input {
-	width: 300px;
-	display:inline-block;
+	width: 93%;
+	display: inline-block;
 }
 
 #username {
@@ -48,10 +47,12 @@ body {
 }
 
 .footer {
-	margin: 100px 0 0 0;
 	background-color: #333;
 	color: white;
 	font-size: 10px;
+	position: absolute;
+	bottom: 0;
+	width: 100%
 }
 
 #problem {
@@ -59,6 +60,4 @@ body {
 	font-size: 100%;
 }
 
-#footer-content {
-	margin: 5px;
-}
+
