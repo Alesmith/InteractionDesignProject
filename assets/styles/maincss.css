@@ -9,7 +9,7 @@
 
 body {
 	background-repeat: repeat;
-	background: url(bilder/background.png) repeat; 
+	background: url(/images/background.png) repeat;
 }
 
 #label1 {
