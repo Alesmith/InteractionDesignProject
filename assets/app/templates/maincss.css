@@ -1,0 +1,64 @@
+.navbar .navbar-brand img{
+	width:  40px;
+	height: 40px;
+}
+
+.navbar .navbar-brand{
+	padding: 5px 5px 5px 10px;
+}
+
+body {
+	background-repeat: repeat;
+	background: url(bilder/background.png) repeat; 
+}
+
+#label1 {
+	font-size: 70px;
+	font-family: "Bookman Old Style", arial, serif; 
+	font-weight: bolder;
+}
+
+#inlog {
+	background-color: white;
+	height: 320px;
+	opacity: 0.7;
+}
+
+#login-btn {
+    font-size: 18px;
+    line-height: normal;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.input {
+	width: 300px;
+	display:inline-block;
+}
+
+#username {
+	margin: 45px 0 20px 0;
+	height: 45px;
+	font-size: 18px;
+}
+
+#password {
+	margin: 0 0 20px 0;
+	height: 45px;
+	font-size: 18px;
+}
+
+.footer {
+	margin: 100px 0 0 0;
+	background-color: #333;
+	color: white;
+	font-size: 10px;
+}
+
+#problem {
+	text-decoration: none;
+}
+
+#footer-content {
+	margin: 5px;
+}
