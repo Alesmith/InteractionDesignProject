@@ -10,4 +10,4 @@ angular.module('alesmith', ['ngRoute'])
                     controller: 'ChapterCtrl'
                 });
             $locationProvider.html5Mode(true);
-        }])
+        }]);
