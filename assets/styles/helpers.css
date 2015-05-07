@@ -1,9 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
 
-* {
-  box-sizing: content-box;
-}
-
 .vcenter {
   /* vertical-align: middle;*/
 }
@@ -50,3 +46,4 @@ body {
 .white {
   background-color: white;
 }
+
