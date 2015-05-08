@@ -1,0 +1,75 @@
+<!-- Komponenter till en tabell, om vi skulle behöva en sådan -->
+
+<!--.main-content {
+  height: 100vh;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 80%
+} FÖR TABELL*/
+
+.table .tbody .tr .td {
+  font-weight: bold;
+}
+
+.panel-heading {
+  font-weight: bold; 
+  font-size: 250%;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+thead th {
+  background-color: #006DCC;
+  color: white;
+}
+
+tr th:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+tr th:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+} -->
+
+<div class="material main-content column col-md-6">
+          
+  <h1>Tentamenresultat</h1>
+  
+    <table class="table table-hover">
+      <thead>
+        <th class='col-md-1'>Kurskod</th>
+        <th class='col-md-5'>Kursnamn</th>
+        <th class='col-md-1'>Högskolepoäng</th>
+        <th class='col-md-1'>Betyg</th>
+        <th class='col-md-2'>Datum</th>
+      </thead>
+      <tbody>
+        <tr class='clickable-row' data-href="tenta.html">
+          <td>TIG098</td>
+          <td>E-business</td>
+          <td>7,5</td>
+          <td>VG</td>
+          <td>2014-06-03</td>
+        </tr>
+        <tr>
+          <td>TIG098</td>
+          <td>E-business</td>
+          <td>7,5</td>
+          <td>VG</td>
+          <td>2014-06-03</td>
+        </tr>
+        <tr>
+          <td>TIG098</td>
+          <td>E-business</td>
+          <td>7,5</td>
+          <td>VG</td>
+          <td>2014-06-03</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
