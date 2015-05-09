@@ -1,56 +1,57 @@
-<div class="container-fluid login-body">
-    <div class="container">
-        <div class="row">
-            <div class="column col-lg-3 ">
-                <span class=" vcenter logo">orange.</span>
-            </div>
+<div ng-app="alesmith">
+    <div ng-controller="AppController">
+        <div class="container-fluid login-body">
+            <div class="container">
+                <div class="row">
+                    <div class="column col-lg-3 ">
+                        <span class=" vcenter logo">orange.</span>
+                    </div>
 
-            <div class="column col-lg-3 pull-right material white"
-                 style="margin-top:30px;   transform: scale(0.8); padding-right:0px">
-                <img style="float:right; margin-left:15px; border:1px solid black;" src="/images/user-profile.png">
+                    <div class="column col-lg-3 pull-right material white"
+                         style="margin-top:30px;   transform: scale(0.8); padding-right:0px">
+                        <img style="float:right; margin-left:15px; border:1px solid black;"
+                             src="/images/user-profile.png">
 
-                <div class="text-right" style="padding-top: 15px;">
-                    <p>Fridolf Karlsson</p>
+                        <div class="text-right" style="padding-top: 15px;">
+                            <p>Fridolf Karlsson</p>
 
-                    <p>
-                        <a href="#">Logga ut</a>
-                    </p>
+                            <p>
+                                <a href="#">Logga ut</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container-fluid login-body" id="tab-bar">
-    <div class="container">
-        <div class="row">
-            <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="#"><b>TENTAMEN</b></a></li>
-                <li role="presentation"><a href="#">CHATT MED EXAMINATOR</a></li>
-                <li role="presentation"><a href="#">INFORMATION</a></li>
-                <li role="presentation"><a href="#">NOTIFIKATIONER</a></li>
-            </ul>
+        <div class="container-fluid login-body" id="tab-bar">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav nav-tabs" id="links">
+                        <li ng-repeat="entry in menu" role="presentation" ng-class="{active:activeTab($index)}"
+                            ng-click="tabClick($index)"><a href="#"><b>{{entry.title}}</b></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+        <div class="container material tab-content" style="background-color:white">
 
-    </div>
-</div>
-<div class="container material" style="background-color:white">
-    <div style="padding-top:10px; padding-bottom: 10px;">
-        <small><strong><a href="#" style="margin-right:10px">Visa alla tentor</a>
-            <a href="#"> Visa senaste</a></small>
-        </strong>
-    </div>
-</div>
-<div class="container white material">
+            <div class="tab-pane fade in active" style="padding-top:10px; padding-bottom: 10px;">
+                <small>
 
-    <div class="row" id="content">
+                    <a ng-repeat="link in menu[tabSelected].links" href="{{link.link}}"
+                       ng-class="{active:getActive(link.link)}" style="margin-right:10px">
+                        {{link.text}}
+                    </a>
 
-        <div class="main-content column col-md-9">
-            <h1>Main TENTARESULTAT plats att visa</h1>
-        </div>
-        <div class="material column col-md-3 ">
-            ANDRA KOLUMN MED LITE INFO OM DET TILL VÄNSTER
+                </small>
+            </div>
 
         </div>
+        <div class="container white material">
 
+            <div class="row" id="content">
+                <div ng-view></div>
+            </div>
+        </div>
     </div>
 </div>
