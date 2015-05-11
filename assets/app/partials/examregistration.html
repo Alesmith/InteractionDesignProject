@@ -2,7 +2,7 @@
 
         <div class="row" id="content">
 
-            <div class="main-content column col-md-9">
+            <div class="main-content column col-md-9 text-center">
 
 
                 <h1>Information om tentamina</h1>
@@ -106,6 +106,10 @@
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
 }
 
+#submenu {
+  width: 250px;
+}
+
 .sub-menu {
 
 }
@@ -124,9 +128,6 @@ body {
   background-color: white;
 }
 
-
-/* CSS till information om examinationsanmälan */
-
 p, h1, h2, h3, ul, li {
   line-height: 1.5;
   font-family:"Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
@@ -141,8 +142,15 @@ p, h1, h2, h3 {
 }
 
 h1 {
-  font-size: 50px;  
-  color: #4cadc0; /*Kan vara en helt annan färg också, men jag tror det blir en färgad rubrik blir en bra avskiljare*/ 
+  font-size: 50px;   
+  margin-bottom: 60px;
+}
+
+h1:after{
+    content: ' ';
+    display: block;
+    border: 1px solid black;
+    width: 700px;
 }
 
 h2 {
@@ -194,86 +202,5 @@ ul {
 .material .btn {
   width: 100%;
 }
-
-
-/* - FÖR TABELL - */
-
-/*.main-content {
-  height: 100vh;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: 80%
-} FÖR TABELL
-
-.table .tbody .tr .td {
-  font-weight: bold;
-}
-
-.panel-heading {
-  font-weight: bold; 
-  font-size: 250%;
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 0 5px;
-}
-
-thead th {
-  background-color: #006DCC;
-  color: white;
-}
-
-tr th:first-child {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-
-tr th:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-För tentamenvisning  
-.main-content {
-  height: 100vh;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: 80%
-}
-
-#points {
-  height: 150px;
-  -moz-border-radius:75px;
-  -webkit-border-radius: 75px;
-  width: 150px;
-  font-size: 30px;
-  display:block;
-  padding-top: 30%;
-  padding-bottom:0;
-  line-height:1.5em;
-  white-space: normal;
-  text-align: center;
-  font-weight: normal;
-}
-
-.glyphicon-print,
-.glyphicon-floppy-disk{
-  font-size: 32px;
-}
-
-.content {
-  padding: 20px 0 20px 0;
-}
-
-#label {
-  padding: 30px;
-}
-
-#exam-well {
-  margin: 60px;
-  width: 82%;
-
-}*/
 
 -->
