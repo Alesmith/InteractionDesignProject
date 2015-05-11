@@ -106,9 +106,15 @@ p, h1, h2, h3 {
 }
 
 h1 {
-  font-size: 50px;  
-  color: #4cadc0; /*Kan vara en helt annan färg också, men jag tror det blir en färgad rubrik blir en bra avskiljare*/ 
-  margin-bottom: 35px;
+  font-size: 50px;   
+  margin-bottom: 60px;
+}
+
+h1:after{
+    content: ' ';
+    display: block;
+    border: 1px solid black;
+    width: 700px;
 }
 
 h3 {
