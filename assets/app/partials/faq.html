@@ -94,11 +94,17 @@ p, h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 50px;  
-  color: #4cadc0; /*Kan vara en helt annan färg också, men jag tror det blir en färgad rubrik blir en bra avskiljare*/
+  font-size: 50px;   
   margin-bottom: 60px;
-  line-height: 1;
 }
+
+h1:after{
+    content: ' ';
+    display: block;
+    border: 1px solid black;
+    width: 700px;
+}
+
 
 h3 {
   margin-bottom: 10px;
