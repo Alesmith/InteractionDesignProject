@@ -1,53 +1,60 @@
-<div class="login-body">
-  <nav class='navbar navbar-static-top navbar-inverse'>
-    <div class='container-fluid'>
-      <div class='navbar-header'>
-        <a href='html.html' class='navbar-brand'>
-          <img src='/images/logga.jpg' alt='orange.' id='logo'/>
-        </a>
-      </div>
+<div class="login-body" style="height:100vh">
+    <div style="background-color:#000; position:fixed; top: 0; width:100%;padding:5px;">
+        <img src='/images/logga.jpg' alt='orange.' id='logo' style="width:50px;"/>
     </div>
-  </nav>
 
-  <div class='container'>
-    <div class='row col-md-4 col-xs-12 col-md-offset-4 text-center' id='label1'>
-      <p> orange. </p>
+
+    <div class='container'>
+        <div class='row col-md-4 col-xs-12 col-md-offset-4 text-center' id='label1'>
+            <p style="padding-top:10vh"> orange. </p>
+        </div>
     </div>
-  </div>
 
 
-  <div class='container' id='container1'>
+    <div class='container' id='container1' ng-app="alesmith">
 
-    <div class='row well well-lg col-md-4 col-xs-12 col-md-offset-4' id='inlog'>
+        <div class='row well well-lg col-md-4 col-xs-12 col-md-offset-4' id='inlog' ng-controller="LoginController">
+            <div>
+                <div ng-class="{ourhide:!error}"
+                     style="margin-bottom:10px; padding:10px; margin-left:30px; margin-right:30px; background-color:#ffc994; border:red 1px solid; color:#000">
+                    Det finns inget sådant ORANGE-konto.
+                </div>
+            </div>
 
-      <div class='text-center'>
-        <div class="input">
-          <input type="text" class="form-control" id='username' placeholder="Användarnamn"
-                 aria-describedby="basic-addon1">
+            <form ng-submit="login(username,password)">
+                <div class='text-center'>
+                    <div class="input">
+                        <input ng-click="error=false" type="text" ng-model="username" class="form-control"
+                               style="margin-bottom:15px"
+                               placeholder="Användarnamn"
+                               aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input">
+                        <input ng-click="error=false" type="password" ng-model="password" class="form-control"
+                               style="margin-bottom:15px"
+                               placeholder="Lösenord"
+                               aria-describedby="basic-addon1">
+                    </div>
+
+                    <button type='submit' id='login-btn' class='btn btn-lg btn-primary'>Logga in</button>
+
+                    <a href='#' id='problem'>Svårigheter att logga in?</a>
+                </div>
+            </form>
         </div>
 
-        <div class="input">
-          <input type="password" class="form-control" id='password' placeholder="Lösenord"
-                 aria-describedby="basic-addon1">
+    </div>
+
+    <div class='footer'>
+        <div class='row' id='footer-content'>
+            <div class='col-md-2 col-md-offset-10 text-right'>
+                <p></p>
+
+                <p>&copy; 2015 - Orange</p>
+
+                <p>Projektgrupp Alesmith</p>
+            </div>
         </div>
-
-        <button type='submit' id='login-btn' class='btn btn-lg btn-primary'>Logga in</button>
-
-        <a href='#' id='problem'>Svårigheter att logga in?</a>
-      </div>
     </div>
-
-  </div>
-
-  <div class='footer'>
-    <div class='row' id='footer-content'>
-      <div class='col-md-2 col-md-offset-10 text-right'>
-        <p></p>
-
-        <p>&copy; 2015 - Orange</p>
-
-        <p>Projektgrupp Alesmith</p>
-      </div>
-    </div>
-  </div>
 </div>

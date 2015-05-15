@@ -2,15 +2,25 @@ angular
     .module('alesmith')
     .controller('AppController', AppController);
 
-AppController.$inject = ['$scope', '$location'];
+AppController.$inject = ['$scope', '$location', '$http', '$rootScope', '$window'];
 
 /* @ngInject */
-function AppController($scope, $location) {
+function AppController($scope, $location, $http, $rootScope, $window) {
     /* jshint validthis: true */
     var vm = this;
     vm.title = 'AppController';
     $scope.tabSelected = -1;
     ////////////////
+    $http.get('/user/current').success(function (user) {
+        $rootScope.user = user;
+    }).error(function () {
+        $window.location = "/login";
+    });
+    $scope.logout = function () {
+        $http.get('/user/logout').success(function () {
+            $window.location = "/login";
+        })
+    };
     $scope.getClass = function (path) {
         return $location.path().substr(0, path.length) == path;
     };
@@ -28,20 +38,20 @@ function AppController($scope, $location) {
         prefix: "information",
         links: [
             {
-                link: '/information/tentamenregistration', text: "Tentamenanmälan"
+                link: '/information/tentamenregistration', text: "Information om tentamina"
             },
             {
                 link: '/information/reexam', text: "Omprövning"
             },
             {
-                link: '/information/rules', text: 'Regler'
+                link: '/information/rules', text: 'Regler för tentamensskrivning'
             },
             {
-                link: '/information/faq', text: 'Vanliga frågor och svar'
+                link: '/information/faq', text: 'Vanliga frågor (FAQ)'
             },
 
             {
-                link: '/information/contact', text: 'Kontakt'
+                link: '/information/contact', text: 'Kontaktinformation'
             }
 
         ]
