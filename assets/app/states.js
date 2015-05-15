@@ -10,17 +10,36 @@ angular.module('alesmith')
                     templateUrl: '/app/partials/allExams.html'
                     //controller: 'CurrentBookingsController'
                 })
-                .when('/exam/newest',{
+                .when('/exam/register', {
+                    templateUrl: '/app/partials/exams-with-unregistered.html'
+                })
+                .when('/exam/:id', {
+                    templateUrl: '/app/partials/exam.html'
+                    //controller: 'CurrentBookingsController'
+                })
+                .when('/exam/newest', {
                     templateUrl: '/app/partials/exams.html'
                 })
-                .when('/information/main',{
+                .when('/information/tentamenregistration', {
+                    templateUrl: '/app/partials/examregistration.html'
+                })
+                .when('/information/faq', {
+                    templateUrl: '/app/partials/faq.html'
+                })
+                .when('/information/contact', {
+                    templateUrl: '/app/partials/contact.html'
+                })
+                .when('/information/reexam', {
+                    templateUrl: '/app/partials/reexam.html'
+                })
+                .when('/information/rules', {
+                    templateUrl: '/app/partials/rules.html'
+                })
+                .when('/chat/main', {
                     templateUrl: '/app/partials/exams.html'
                 })
-                .when('/chat/main',{
-                    templateUrl: '/app/partials/exams.html'
-                })
-                .when('/notifications/main',{
-                    templateUrl: '/app/partials/exams.html'
+                .when('/notifications/settings', {
+                    templateUrl: '/app/partials/settings.html'
                 })
                 .otherwise({
                     redirectTo: '/exam/all'
