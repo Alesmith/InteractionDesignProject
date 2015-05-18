@@ -1,0 +1,89 @@
+#headline {
+  font-size: 55px;
+}
+
+.show-exam-content h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.show-exam-content #points {
+  height: 180px;
+  -moz-border-radius: 90px;
+  -webkit-border-radius: 90px;
+  width: 180px;
+  font-size: 30px;
+  display: block;
+  padding-top: 45%;
+  padding-bottom: 0;
+  line-height: 1.5em;
+  white-space: normal;
+  text-align: center;
+  font-weight: normal;
+}
+
+#headline .glyphicon-print,
+#headline .glyphicon-floppy-disk{
+  font-size: 40px;
+}
+
+.show-exam-content #row1 #content {
+  padding: 20px 20px 0 0;
+}
+
+.show-exam-content #label {
+  padding: 30px;
+}
+
+.show-exam-content #exam-frame {
+  margin: 0 0 30px 60px;
+  width: 700px;
+  padding: 0;
+}
+
+.show-exam-content #pdf {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+#show-exam-submenu {
+  margin-top: 20px;
+}
+
+#show-exam-submenu #top {
+  text-align: center;
+}
+
+#show-exam-submenu #course-code,
+#show-exam-submenu #course-name{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#show-exam-submenu h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#show-exam-submenu #anon-code,
+#show-exam-submenu #grade,
+#show-exam-submenu #examinator {
+  font-size: 15px;
+}
+
+#show-exam-submenu #contact {
+  font-size: 20px;
+}
+
+#show-exam-submenu .glyphicon-envelope {
+  font-size: 16px;
+}
+
+#show-exam-submenu #unhappy {
+  font-size: 15px;
+}
+
+#show-exam-submenu #unhappy em{
+  font-size: 20px;
+}
