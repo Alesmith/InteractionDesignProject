@@ -1,0 +1,83 @@
+#settings {
+  margin-left: 0;
+  margin-right: 34px;
+  padding-left: 60px;
+  padding-top: 40px;
+}
+
+#settings .fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 10px 10px 0px;
+}
+
+#settings .fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+#settings-submenu #top p {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#settings-submenu #bottom p {
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+#settings-submenu a {
+  color: #4cadc0;
+  text-decoration: none;
+}
+
+#settings h1 {
+  margin-bottom: 50px;
+}
+
+
+#settings #personal-well {
+  height: 655px;
+  width: 300px;
+  color: #aeadac;
+  background: #f5f5f5;
+  margin: 0;
+  border: 0;
+  padding: 10px;
+}
+
+#settings .checkbox {
+  padding: 0 0 0 10px;
+  font-size: 16px;
+  width: 300px;
+}
+
+#settings .checkbox-text {
+  padding: 2px 10px 0 5px;
+}
+
+#settings #email-check,
+#settings #sms-check {
+  width: 20px;
+  height: 20px;
+
+}
+
+#settings #setting-panels {
+  width: 450px;
+}
+
+#setting-panels .btn {
+  display: inline;
+  width: 150px;
+  margin: ;
+}
