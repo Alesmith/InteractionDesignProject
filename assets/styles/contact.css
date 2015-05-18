@@ -1,4 +1,3 @@
-
 .contact-content p,
 .contact-content h1,
 .contact-content h2,
@@ -60,6 +59,10 @@
 .contact-content a {
   color: #4cadc0;
   text-decoration: none;
+}
+
+#exped-profil {
+  margin-left: 40px;
 }
 
 #studieexpeditionen,
