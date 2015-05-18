@@ -1,0 +1,85 @@
+#reexam p,
+#reexam h1,
+#reexam h2,
+#reexam h3,
+#reexam ol,
+#reexam li {
+  line-height: 1.5;
+  font-family:"Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin:0;
+  text-rendering:optimizeLegibility;
+  font-weight: normal;
+}
+
+#reexam p,
+#reexam h1,
+#reexam h2,
+#reexam h3 {
+  width: 85%;
+}
+
+#reexam {
+  margin-left: 0;
+  margin-right: 34px;
+  padding-left: 60px;
+  padding-top: 40px;
+}
+
+#reexam h1 {
+  font-size: 50px;   
+  margin-bottom: 60px;
+}
+
+#reexam h1:after{
+    content: ' ';
+    display: block;
+    border: 1px solid black;
+    width: 700px;
+}
+
+#reexam h3 {
+  margin-bottom: 10px;
+  margin-top: 35px;
+}
+
+
+#reexam p {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+#reexam ol {
+  margin: 15px 0 15px 0;
+  padding-left: 30px;
+  width: 65%;
+}
+
+#reexam ol li {
+  margin-bottom: 10px;
+}
+
+.material .btn {
+  width: 100%;
+}
+
+#reexam-submenu h4{
+  padding-top: 20px;
+}
+
+#reexam-submenu #shortcuts{
+  border-top: 1px solid #e5e5e3;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+
+}
+
+#reexam-submenu a,
+.exam-info-content a {
+  color: #4cadc0;
+  text-decoration: none;
+}
