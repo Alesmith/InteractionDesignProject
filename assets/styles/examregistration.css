@@ -12,6 +12,13 @@
   font-weight: normal;
 }
 
+#exam-info-content {
+  margin-left: 0;
+  margin-right: 34px;
+  padding-left: 60px;
+  padding-top: 40px;
+}
+
 .exam-info-content p,
 .exam-info-content h1,
 .exam-info-content h2,
