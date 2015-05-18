@@ -29,9 +29,13 @@ function AppController($scope, $location, $http, $rootScope, $window) {
         title: "TENTAMEN",
         prefix: "exam",
         links: [
-            {link: '/exam/all', text: 'Visa alla tentor'},
-            {link: '/exam/register', text: 'Tentaregistrering'}
+            {link: '/exam/all', text: 'Visa alla tentor'}
         ]
+    });
+    $scope.menu.push({
+        title: "CHAT",
+        prefix: "chat",
+        links: [{link: '/chat/main', text: 'Chat'}]
     });
     $scope.menu.push({
         title: "INFORMATION",
@@ -48,25 +52,27 @@ function AppController($scope, $location, $http, $rootScope, $window) {
             },
             {
                 link: '/information/faq', text: 'Vanliga frågor (FAQ)'
-            },
-
-            {
-                link: '/information/contact', text: 'Kontaktinformation'
             }
 
         ]
     });
     $scope.menu.push({
-        title: "CHAT",
-        prefix: "chat",
-        links: [{link: '/chat/main', text: 'Chat'}]
+        title: "SUPPORT",
+        prefix: "support",
+        links: [{link: '/information/contact', text: 'Kontaktinformation'}]
     });
+    
     $scope.menu.push({
         title: "INSTÄLLNINGAR",
         prefix: "notifications",
         links: [
             {link: '/notifications/settings', text: 'Inställningar'}
         ]
+    });
+    $scope.menu.push({
+        title: "HELP",
+        prefix: "help",
+        links: [{link: '/notifications/settings', text: ''}]
     });
     $scope.tabClick = function (index) {
         $scope.tabSelected = index;
