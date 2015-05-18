@@ -7,15 +7,14 @@ angular.module('alesmith')
             $routeProvider
                 // route for the booking overview page
                 .when('/exam/all', {
-                    templateUrl: '/app/partials/allExams.html'
-                    //controller: 'CurrentBookingsController'
+                    templateUrl: '/app/partials/test.html',
+                    controller:'ShowAllExamsController'
                 })
                 .when('/exam/register', {
                     templateUrl: '/app/partials/exams-with-unregistered.html'
                 })
                 .when('/exam/:id', {
                     templateUrl: '/app/partials/exam.html'
-                    //controller: 'CurrentBookingsController'
                 })
                 .when('/exam/newest', {
                     templateUrl: '/app/partials/exams.html'
