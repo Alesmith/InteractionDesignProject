@@ -2,7 +2,7 @@ angular
     .module('alesmith')
     .controller('ShowAllExamsController', ShowAllExamsController);
 
-ShowAllExamsController.$inject = ['$scope','$sails'];
+ShowAllExamsController.$inject = ['$scope', '$sails'];
 
 /* @ngInject */
 function ShowAllExamsController($scope, $sails) {
@@ -12,8 +12,8 @@ function ShowAllExamsController($scope, $sails) {
     $scope.exams = [];
 
     ////////////////
-    $sails.get("/exam").success(function (data){
-        $scope.exams=data;
+    $sails.get("/exam").success(function (data) {
+        $scope.exams = data;
     });
     $sails.on("exam", function (message) {
         console.log(message);
@@ -23,8 +23,10 @@ function ShowAllExamsController($scope, $sails) {
         if (message.verb === 'updated') {
             for (var exam in $scope.exams) {
                 var value = $scope.exams[exam];
-                if (message.previous.id === exam.id) {
-                    $scope.exams[exam] = message.data;
+                if (message.previous.id === value.id) {
+                    for (var objKey in message.data) {
+                        $scope.exams[exam][objKey] = message.data[objKey];
+                    }
                 }
             }
         }

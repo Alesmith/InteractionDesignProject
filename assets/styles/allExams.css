@@ -1,0 +1,113 @@
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700);
+
+#wrap {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  color: #989A8F;
+}
+
+#exams {
+  background-color: #ffffff; 
+  height: 325px;
+  width: 100%;
+  margin-top: 50px;  
+  list-style-type: none;
+}
+
+#exams li {
+  float:left;
+  width: 220px;
+  text-align:center;
+  border-left:1px solid #EAE9E4;
+  border-right:1px solid #EAE9E4;
+  margin: 10px;
+  margin-bottom: 50px;
+  list-style-type: none;
+}
+
+.exam-top {
+  background-color:#EAE9E4;
+  height: 88px;
+  border:1px solid #EAE9E4;
+}
+
+
+.exam-top h2 {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 24px;
+}
+
+.exam-top p {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 14px;
+}
+
+.exam-circle {
+  width:60px;
+  height:60px;
+  border-radius:60px;
+  font-size:20px;
+  color:#fff;
+  line-height:60px; 
+  text-align:center;
+  background:#989A8F;
+  margin-left: 80px;
+  margin-top: 10px;
+}
+
+.exam-bottom {
+  margin-top:50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #EAE9E4;
+  height: 220px;
+}
+
+.exam-bottom p {
+  font-size: 15px;
+  font-family: 'Droid Serif', sans-serif;
+  padding:1px;
+}
+
+.exam-bottom #course-name {
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.exam-bottom p span {
+  font-weight:bold; 
+}
+
+.sign-in {
+  margin-top:50px;
+}
+
+#exam-show-button {
+   border: 1px solid #989A8F;
+   padding: 10px 40px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   color: #989A8F;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+   font-size:17px;
+}
+
+#exams li:hover .exam-top{
+  background-color:#5D4660;   
+  color:#FFFFFF; 
+}
+
+#exams li:hover #exam-show-button{
+  background-color:#5D4660;   
+  color:#FFFFFF; 
+}
+
+#exams li:hover .exam-circle{
+  background-color:#BC9B94;
+  color:#FFFFFF; 
+}

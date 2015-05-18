@@ -18,7 +18,7 @@ function LoginController($scope, $http, $location, $window) {
             password: password
         };
         $http.post('/user/login', info).success(function (data) {
-            $location.path("/exam/");
+            $location.path("/exam/all");
             console.log(data);
             setTimeout(function () {
                 $window.location.reload()
