@@ -29,13 +29,13 @@ function AppController($scope, $location, $http, $rootScope, $window) {
         title: "TENTAMEN",
         prefix: "exam",
         links: [
-            {link: '/exam/all', text: 'Visa alla tentor'}
+            {link: '/exam/all', text: ''}
         ]
     });
     $scope.menu.push({
         title: "CHATT",
         prefix: "chat",
-        links: [{link: '/chat/main', text: 'Chat'}]
+        links: [{link: '/chat/main', text: ''}]
     });
     $scope.menu.push({
         title: "INFORMATION",
@@ -59,14 +59,14 @@ function AppController($scope, $location, $http, $rootScope, $window) {
     $scope.menu.push({
         title: "SUPPORT",
         prefix: "support",
-        links: [{link: '/information/contact', text: 'Kontaktinformation'}]
+        links: [{link: '/information/contact', text: ''}]
     });
     
     $scope.menu.push({
         title: "INSTÄLLNINGAR",
         prefix: "notifications",
         links: [
-            {link: '/notifications/settings', text: 'Inställningar'}
+            {link: '/notifications/settings', text: ''}
         ]
     });
 
