@@ -11,7 +11,13 @@
 
 .login-body {
 	background-repeat: repeat;
-	background: url(/images/background.png) repeat;
+  background-color: #FFAC59;
+	<!--background: url(/images/background.png) repeat;-->
+}
+
+.tabmenu-body {
+  background-repeat: repeat;
+  background: linear-gradient(#FFAC59, whitesmoke);
 }
 
 img.img-fill {
@@ -22,8 +28,7 @@ img.img-fill {
 }
 #label1 {
 	font-size: 570%;
-	font-family: "Bookman Old Style", arial, serif;
-	font-weight: bolder;
+	font-family: 'Abril Fatface', cursive;
 }
 .ourhide {
 	visibility: hidden;

@@ -69,11 +69,7 @@ function AppController($scope, $location, $http, $rootScope, $window) {
             {link: '/notifications/settings', text: 'Inställningar'}
         ]
     });
-    $scope.menu.push({
-        title: "HJÄLP",
-        prefix: "help",
-        links: [{link: '/notifications/settings', text: ''}]
-    });
+
     $scope.tabClick = function (index) {
         $scope.tabSelected = index;
 
