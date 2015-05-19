@@ -1,37 +1,45 @@
 <div class="main-content column col-md-9">
-  <div class="show-exam-content">
-            
-    <div class='row' id="row1"> 
-      <div class='col-md-6 col-md-offset-1' id='content'>
+    <div class="show-exam-content">
 
-        <h1 id='headline'>Tentamen
-          <i class='glyphicon glyphicon-print'></i>
-          <i class='glyphicon glyphicon-floppy-disk'></i>
-        </h1>
-      
-        <h3>TIG015 Informationsteknologi</h3>
-        <h4>2013-12-19</h4>
-      </div>
+        <div class='row' id="row1">
+            <div class='col-md-6 col-md-offset-1' id='content'>
 
-      <div class='col-md-2 col-md-offset-1' id='label'>
-        <span class='label label-info' id='points'>Poäng 20/30</span>
-      </div>
+                <h1 id='headline'>Tentamen
+                    <i class='glyphicon glyphicon-print'></i>
+                    <i class='glyphicon glyphicon-floppy-disk'></i>
+                </h1>
+
+                <h3>{{exam.metaData.courseCode}} {{exam.metaData.name}}</h3>
+                <h4>{{exam.metaData.date}}</h4>
+            </div>
+
+            <div class='col-md-2 col-md-offset-1' id='label'>
+                <span class='label label-info' id='points'>Poäng {{exam.points}}/{{exam.metaData.maxPoints}}</span>
+            </div>
+        </div>
+
+
     </div>
-
-    <div class='row' id='exam-frame'> 
-      <iframe src="C:\Users\Gabriella\Documents\Skola\TIG164\Projekt 2\Del 2 ID-projekt VT 2015.pdf" style="width:700px; height:965px;" frameborder="0" id="pdf"></iframe>
+    <div ng-repeat="question in exam.metaData.questions">
+        <h1>{{question.data}}</h1>
+        <h3>Ditt svar: </h3><p>{{exam.answers[$index].data}}</p>
+        <h4>Poäng {{exam.answers[$index].points}}/{{question.points}}</h4>
     </div>
-  </div>
 </div>
 
 <div class="material column col-md-3 " id="show-exam-submenu">
-            
-  <h2><strong>Tentamen</strong></h2>
-  <p id="anon-code"><strong>Anonym kod:</strong> JFK343</p>
-  <p id="grade"><strong>Tentabetyg:</strong> &nbsp;&nbsp;&nbsp;Godkänt</p>
-  <p id="examinator"><strong>Examinator: </strong>&nbsp;&nbsp;&nbsp;Kjell Engberg</p>
-  <br>
-  <p id="contact"><a href="#"><i class='glyphicon glyphicon-envelope'></i> Kontakta examinator</a></p>
-  <br>
-  <p id="unhappy"><em>Funderar du på att överklaga din tentamen?</em><br><br>Läs mer i fliken för <a href="#">Information</a>
+
+    <h2><strong>Tentamen</strong></h2>
+
+    <p id="anon-code"><strong>Anonym kod:</strong> {{exam.anonCode}}</p>
+
+    <p id="grade"><strong>Tentabetyg:</strong> &nbsp;&nbsp;&nbsp;{{exam.grade}}</p>
+
+    <p id="examinator"><strong>Examinator: </strong>&nbsp;&nbsp;&nbsp;{{exam.metaData.examinator}}</p>
+    <br>
+
+    <p id="contact"><a href="#"><i class='glyphicon glyphicon-envelope'></i> Kontakta examinator</a></p>
+    <br>
+
+    <p id="unhappy"><em>Funderar du på att överklaga din tentamen?</em><br><br>Läs mer i fliken för <a href="#">Information</a>
 </div>
