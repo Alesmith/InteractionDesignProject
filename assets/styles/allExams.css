@@ -111,12 +111,22 @@
   color:#FFFFFF; 
 }
 
-#exams li:hover #exam-show-button{
+/*#exams li:hover #exam-show-button{
   background-color:#5D4660;   
   color:#FFFFFF; 
 }
 
 #exams li:hover .exam-circle{
+  background-color:#BC9B94;
+  color:#FFFFFF; 
+}*/
+
+#exams li.activiated li:hover #exam-show-button{
+  background-color:#5D4660;   
+  color:#FFFFFF; 
+}
+
+#exams li.activiated li:hover .exam-circle{
   background-color:#BC9B94;
   color:#FFFFFF; 
 }
