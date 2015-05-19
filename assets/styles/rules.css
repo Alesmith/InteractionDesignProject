@@ -1,0 +1,94 @@
+#rules {
+  margin-left: 0;
+  margin-right: 34px;
+  padding-left: 60px;
+  padding-top: 40px;
+}
+
+#rules #rule-list { 
+  width: 700px; 
+  margin-left: 30px;
+  margin-top: 30px;
+}
+#rules #rule-list ol { 
+  font-family: Georgia, Times, serif; 
+  font-size: 34px; 
+  color: #bfe1f1;  
+}
+
+#rules #rule-list ol li {
+  margin: 0;
+}
+
+#rules #rule-list ol li p { 
+  padding: 8px; 
+  font-style: normal; 
+  font-family: Arial; 
+  font-size: 13px; 
+  color: #555; 
+  border-left: 1px solid #999; 
+}
+
+#rules #rule-list ol li p em { 
+  display: block;
+  font-size: 15px; 
+}
+
+#rules p,
+#rules h1,
+#rules h2,
+#rules h3,
+#rules h4 {
+  font-family:"Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin:0;
+  text-rendering:optimizeLegibility;
+  font-weight: normal;
+}
+
+#rules p,
+#rules h1,
+#rules h2,
+#rules h3,
+#rules h4 {
+  width: 85%;
+  line-height: 1.5;
+}
+
+#rules h1 {
+  font-size: 50px;   
+  margin-bottom: 50px;
+}
+
+#rules h1:after{
+    content: ' ';
+    display: block;
+    border: 1px solid black;
+    width: 700px;
+}
+
+#rules p {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+#rules-submenu h4{
+  padding-top: 20px;
+}
+
+#rules-submenu #shortcuts{
+  border-top: 1px solid #e5e5e3;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+
+}
+
+#rules-submenu a,
+#rules a {
+  color: #4cadc0;
+  text-decoration: none;
+}

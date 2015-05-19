@@ -7,6 +7,7 @@
   margin: 0 auto;
   text-align: left;
   color: #989A8F;
+  margin-left: 60px;
 }
 
 #exams {
@@ -15,6 +16,14 @@
   width: 100%;
   margin-top: 50px;  
   list-style-type: none;
+
+}
+
+#allExams-content {
+  margin-left: 0;
+  margin-right: 54px;
+  padding-left: 0;
+  padding-top: 40px;
 }
 
 #exams li {
