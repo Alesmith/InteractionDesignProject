@@ -17,7 +17,6 @@
 .login-body1 {
 	background-repeat: repeat;
 	background: url(/images/background.jpg) repeat;
-	
 }
 
 .tabmenu-body {
@@ -28,16 +27,20 @@
 img.img-fill {
 	width:100%;
 }
+
 .wellbg {
 	background-color: #f5f5f5;
 }
+
 #label1 {
 	font-size: 570%;
 	font-family: 'Abril Fatface', cursive;
 }
+
 .ourhide {
 	visibility: hidden;
 }
+
 #inlog {
 	background-color: white;
 	background: rgba(255, 255, 255, 0.5);
@@ -68,8 +71,6 @@ img.img-fill {
 	height: 100%;
 	font-size: 150%;
 }
-
-
 
 #problem {
 	text-decoration: none;
