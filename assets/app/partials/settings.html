@@ -65,11 +65,11 @@
                         </div>
 
                         <div class="col-md-4">
-                            <div class="checkbox">
-                                <label ng-click="update()">
-                                    <input type="checkbox" id="sms-check">
+                            <div class="checkbox" ng-click="update()">
+                                <label>
+                                    <input type="checkbox" id="sms-check" ng-model="user.notification.sms">
 
-                                    <p class="checkbox-text" ng-model="user.notification.sms">Via SMS</p></input>
+                                    <p class="checkbox-text" >Via SMS</p></input>
                                 </label>
                             </div>
                         </div>
