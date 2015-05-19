@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-<div class="main-content white material column col-md-9">
-  <div class="show-exam-content">
-            
-    <div class='row' id="row1"> 
-      <div class='col-md-6 col-md-offset-1' id='content'>
-
-        <h1 id='headline'>Tentamen
-          <i class='glyphicon glyphicon-print'></i>
-          <i class='glyphicon glyphicon-floppy-disk'></i>
-        </h1>
-      
-        <h3>TIG015 Informationsteknologi</h3>
-        <h4>2013-12-19</h4>
-      </div>
-
-      <div class='col-md-2 col-md-offset-1' id='label'>
-        <span class='label label-info' id='points'>Poäng 20/30</span>
-      </div>
-    </div>
-=======
 <div class="main-content column col-md-9">
     <div class="show-exam-content">
 
@@ -33,14 +12,10 @@
                 <h3>{{exam.metaData.courseCode}} {{exam.metaData.name}}</h3>
                 <h4>{{exam.metaData.date}}</h4>
             </div>
->>>>>>> origin/master
-
             <div class='col-md-2 col-md-offset-1' id='label'>
                 <span class='label label-info' id='points'>Poäng {{exam.points}}/{{exam.metaData.maxPoints}}</span>
             </div>
         </div>
-
-
     </div>
     <div ng-repeat="question in exam.metaData.questions">
         <h1>{{question.data}}</h1>
