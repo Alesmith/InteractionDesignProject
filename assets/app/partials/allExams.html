@@ -11,7 +11,7 @@
                         <p id="course-name">{{exam.metaData.name}}</p>
                         <p id="points"><span>{{exam.metaData.points}}</span> HP</p>
                         <p id="exam-date">{{exam.metaData.date| date:'medium'}}</p>
-                        <div class="sign-in"><a class="button" id="exam-show-button"> 15 dagar kvar</a></div>
+                        <div class="sign-in"><a class="button" id="exam-show-button" href="/exam/{{exam.id}}"> 15 dagar kvar</a></div>
                     </div>
                 </li>
             </ul>
