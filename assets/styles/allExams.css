@@ -106,12 +106,12 @@
    font-size:17px;
 }
 
-#exams li:hover .exam-top{
+/*#exams li:hover .exam-top{
   background-color:#5D4660;   
   color:#FFFFFF; 
 }
 
-/*#exams li:hover #exam-show-button{
+#exams li:hover #exam-show-button{
   background-color:#5D4660;   
   color:#FFFFFF; 
 }
@@ -121,12 +121,31 @@
   color:#FFFFFF; 
 }*/
 
-#exams li.activiated li:hover #exam-show-button{
-  background-color:#5D4660;   
+#exams li.activated li:hover .exam-top{
+  background-color: #5D4660;   
   color:#FFFFFF; 
 }
 
-#exams li.activiated li:hover .exam-circle{
-  background-color:#BC9B94;
+#exams li.activated li:hover #exam-show-button{
+  background-color: #5D4660;   
+  color: #989A8F;
+}
+
+#exams li.activated li:hover .exam-circle{
+  background-color: #BC9B94;
+  color: ; 
+}
+
+#exams li.activated li:hover .exam-top{
+  background-color: #5D4660;   
   color:#FFFFFF; 
+}
+
+#exams li.activated li:hover #exam-show-button{
+  color: #989A8F;
+}
+
+#exams li.activated li:hover .exam-circle{
+  background-color: #BC9B94;
+  color: #FFFFFF; 
 }
