@@ -14,7 +14,8 @@ angular.module('alesmith')
                     templateUrl: '/app/partials/allExams.html'
                 })
                 .when('/exam/:id', {
-                    templateUrl: '/app/partials/exam.html'
+                    templateUrl: '/app/partials/exam.html',
+                    controller: 'ExamController'
                 })
                 .when('/exam/newest', {
                     templateUrl: '/app/partials/exams.html'
