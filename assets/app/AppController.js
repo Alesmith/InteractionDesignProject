@@ -59,7 +59,14 @@ function AppController($scope, $location, $http, $rootScope, $window) {
     $scope.menu.push({
         title: "SUPPORT",
         prefix: "support",
-        links: [{link: '/information/contact', text: ''}]
+        links: [
+            {   
+                link: '/information/contact', text: 'Kontaktinformation'
+            },
+            {   
+                link: '/information/contact', text: 'Hjälp'
+            }
+        ]
     });
     
     $scope.menu.push({
