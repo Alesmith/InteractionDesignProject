@@ -11,12 +11,18 @@
 
 .login-body {
 	background-repeat: repeat;
+	background-color: #fdb580;
+}
+
+.login-body1 {
+	background-repeat: repeat;
 	background: url(/images/background.jpg) repeat;
+	
 }
 
 .tabmenu-body {
   background-repeat: repeat;
-  background: linear-gradient(#FFAC59, whitesmoke);
+  background: linear-gradient(#fdb580, whitesmoke);
 }
 
 img.img-fill {

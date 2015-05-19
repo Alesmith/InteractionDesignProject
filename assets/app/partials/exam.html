@@ -10,7 +10,7 @@
                 </h1>
 
                 <h3>{{exam.metaData.courseCode}} {{exam.metaData.name}}</h3>
-                <h4>{{exam.metaData.date}}</h4>
+                <h4>{{exam.metaData.date| date:'yyyy-MM-dd'}}</h4>
             </div>
             <div class='col-md-2 col-md-offset-1' id='label'>
                 <span class='label label-info' id='points'>Poäng {{exam.points}}/{{exam.metaData.maxPoints}}</span>

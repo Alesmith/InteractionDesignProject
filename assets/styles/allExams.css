@@ -106,46 +106,30 @@
    font-size:17px;
 }
 
-/*#exams li:hover .exam-top{
+#exams li.activated:hover .exam-top{
   background-color:#5D4660;   
+  color:#FFFFFF;
+}
+
+#exams li.activated:hover #exam-show-button{
+  background-color:#5D4660; 
   color:#FFFFFF; 
 }
 
-#exams li:hover #exam-show-button{
-  background-color:#5D4660;   
-  color:#FFFFFF; 
+#exams li.activated:hover .exam-circle{
+  background-color: #BC9B94; 
 }
 
-#exams li:hover .exam-circle{
-  background-color:#BC9B94;
-  color:#FFFFFF; 
-}*/
-
-#exams li.activated li:hover .exam-top{
-  background-color: #5D4660;   
-  color:#FFFFFF; 
+#exams li.deactivated li:hover .exam-top{
+  color: #eae9e4; 
+  background-color:#EAE9E4;
 }
 
-#exams li.activated li:hover #exam-show-button{
-  background-color: #5D4660;   
-  color: #989A8F;
+#exams li.deactivated li:hover #exam-show-button{
+  background-color: #FFFFFF;
+  color: #989a8f;
 }
 
-#exams li.activated li:hover .exam-circle{
-  background-color: #BC9B94;
-  color: ; 
-}
-
-#exams li.activated li:hover .exam-top{
-  background-color: #5D4660;   
-  color:#FFFFFF; 
-}
-
-#exams li.activated li:hover #exam-show-button{
-  color: #989A8F;
-}
-
-#exams li.activated li:hover .exam-circle{
-  background-color: #BC9B94;
-  color: #FFFFFF; 
+#exams li.deactivated li:hover .exam-circle{
+  background-color: #989a8f;
 }
