@@ -30,9 +30,9 @@
         <div class='panel-body'>
 
           <div class="form-group">
-            <input type="telephone" class="form-control" id="inputPhone" placeholder="Mobilnummer">
+            <input type="telephone" ng-model="user.phoneNumber" class="form-control" id="inputPhone" placeholder="Mobilnummer">
           </div>
-          <button type="submit" class="btn btn-default">Spara ändringar</button>
+          <button type="submit" class="btn btn-default" ng-click="update();">Spara ändringar</button>
           <button type="submit" class="btn btn-default">Avbryt</button>
         </div>
       </div>    
@@ -48,17 +48,17 @@
             <label>Hur vill du få information om nya uppdateringar på orange.?</label>
 
             <div class="col-md-4 col-md-offset-2" id="checkbox">
-              <div class="checkbox">
+              <div class="checkbox" ng-click="update()">
                 <label>
-                  <input type="checkbox" id="email-check"><p class="checkbox-text">Via e-post</p></input>
+                  <input type="checkbox" id="email-check" ng-model="user.notification.email"><p class="checkbox-text">Via e-post</p></input>
                 </label>
               </div>
             </div>
       
             <div class="col-md-4">
               <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="sms-check"><p class="checkbox-text">Via SMS</p></input>
+                <label ng-click="update()">
+                  <input type="checkbox" id="sms-check"><p class="checkbox-text" ng-model="user.notification.sms">Via SMS</p></input>
                 </label>
               </div>
             </div>

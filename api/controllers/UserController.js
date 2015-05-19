@@ -20,7 +20,10 @@ module.exports = {
     },
     current: function (req, res) {
         if (req.session.user) {
-            return res.json(req.session.user);
+            return User.findOne({id:req.session.user.id}).exec(function(err,user){
+                res.json(user);
+            });
+
         }
         return res.status(404).json({error: 'Not logged in'});
     },

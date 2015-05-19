@@ -15,12 +15,7 @@ angular.module('alesmith')
                 })
                 .when('/exam/:id', {
                     templateUrl: '/app/partials/exam.html',
-                    controller: 'ExamController',
-                    resolve: {
-                        exam: ['$sails','$routeParams',function($sails,$routeParams) {
-                            return $sails.get("/v1/writtenExam/"+$routeParams.id)
-                        }]
-                    }
+                    controller: 'ExamController'
                 })
                 .when('/exam/newest', {
                     templateUrl: '/app/partials/exams.html'
@@ -45,7 +40,8 @@ angular.module('alesmith')
                     templateUrl: '/app/partials/exams.html'
                 })
                 .when('/notifications/settings', {
-                    templateUrl: '/app/partials/settings.html'
+                    templateUrl: '/app/partials/settings.html',
+                    controller:'SettingsController'
                 })
                 .otherwise({
                     redirectTo: '/exam/all'

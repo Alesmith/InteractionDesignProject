@@ -11,13 +11,14 @@ function AppController($scope, $location, $http, $rootScope, $window) {
     vm.title = 'AppController';
     $scope.tabSelected = -1;
     ////////////////
-    $http.get('/user/current').success(function (user) {
+    $http.get('/v1/user/current').success(function (user) {
+        console.log(user,"lol")
         $rootScope.user = user;
     }).error(function () {
         $window.location = "/login";
     });
     $scope.logout = function () {
-        $http.get('/user/logout').success(function () {
+        $http.get('/v1/user/logout').success(function () {
             $window.location = "/login";
         })
     };

@@ -17,7 +17,7 @@ function LoginController($scope, $http, $location, $window) {
             username: username,
             password: password
         };
-        $http.post('/user/login', info).success(function (data) {
+        $http.post('/v1/user/login', info).success(function (data) {
             $location.path("/exam/all");
             console.log(data);
             setTimeout(function () {
