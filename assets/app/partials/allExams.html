@@ -1,16 +1,20 @@
-<div class="main-content column col-md-9 material white" id="allExams-content">
+<div class="main-content column white material col-md-12" id="allExams-content">
     <div class="wrap" id="wrap">
         <div class="table" id="exams">
             <ul>
                 <li ng-repeat="exam in exams">
                     <div class="exam-top">
                         <h2 id="course-code">{{exam.metaData.courseCode}}</h2>
+
                         <div class="exam-circle" id="grade">{{exam.grade}}</div>
                     </div>
                     <div class="exam-bottom">
                         <p id="course-name">{{exam.metaData.name}}</p>
+
                         <p id="points"><span>{{exam.metaData.points}}</span> HP</p>
+
                         <p id="exam-date">{{exam.metaData.date}}</p>
+
                         <div class="sign-in"><a class="button" id="exam-show-button"> 15 dagar kvar</a></div>
                     </div>
                 </li>
