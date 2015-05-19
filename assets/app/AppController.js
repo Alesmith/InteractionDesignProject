@@ -70,7 +70,7 @@ function AppController($scope, $location, $http, $rootScope, $window) {
         ]
     });
     $scope.menu.push({
-        title: "HELP",
+        title: "HJÄLP",
         prefix: "help",
         links: [{link: '/notifications/settings', text: ''}]
     });
