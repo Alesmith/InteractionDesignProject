@@ -14,8 +14,9 @@ function ShowAllExamsController($scope, $sails) {
     ////////////////
     $sails.get("/v1/writtenExam?writtenBy=" + "1").success(function (data) {
         $scope.exams = data;
+
     });
-    $sails.on("/v1/writtenexam", function (message) {
+    $sails.on("writtenexam", function (message) {
         $sails.get("/v1/writtenExam?writtenBy=" + "1").success(function (data) {
             $scope.exams = data;
         });

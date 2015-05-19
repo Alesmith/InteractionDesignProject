@@ -76,6 +76,8 @@ function AppController($scope, $location, $http, $rootScope, $window) {
     });
     $scope.tabClick = function (index) {
         $scope.tabSelected = index;
+
+        $location.url($scope.menu[index].links[0].link);
     };
     $scope.activeTab = function (index) {
         if ($scope.tabSelected != -1) return index == $scope.tabSelected;
