@@ -19,7 +19,7 @@
     </div>
     <div ng-repeat="question in exam.metaData.questions">
         <h1>{{question.data}}</h1>
-        <h3>Ditt svar: </h3><p>{{exam.answers[$index].data}}</p>
+        <h3>Ditt svar: </h3><p ng-bind-html="exam.answers[$index].data"></p>
         <h4>Poäng {{exam.answers[$index].points}}/{{question.points}}</h4>
     </div>
 </div>
