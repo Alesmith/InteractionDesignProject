@@ -8,6 +8,10 @@
 module.exports = {
 
   attributes: {
+    writtenExams:{
+      collection: 'writtenExam',
+      via: 'writtenBy'
+    }
   }
 };
 

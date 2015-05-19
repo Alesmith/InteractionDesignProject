@@ -12,23 +12,12 @@ function ShowAllExamsController($scope, $sails) {
     $scope.exams = [];
 
     ////////////////
-    $sails.get("/exam").success(function (data) {
+    $sails.get("/v1/writtenExam?writtenBy=" + "1").success(function (data) {
         $scope.exams = data;
     });
-    $sails.on("exam", function (message) {
-        console.log(message);
-        if (message.verb === "created") {
-            $scope.exams.push(message.data);
-        }
-        if (message.verb === 'updated') {
-            for (var exam in $scope.exams) {
-                var value = $scope.exams[exam];
-                if (message.previous.id === value.id) {
-                    for (var objKey in message.data) {
-                        $scope.exams[exam][objKey] = message.data[objKey];
-                    }
-                }
-            }
-        }
+    $sails.on("/v1/writtenexam", function (message) {
+        $sails.get("/v1/writtenExam?writtenBy=" + "1").success(function (data) {
+            $scope.exams = data;
+        });
     });
 }
