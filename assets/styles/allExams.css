@@ -107,17 +107,17 @@
 }
 
 #exams li.activated:hover .exam-top{
-  background-color:#5D4660;   
+  background-color: #4488a1;   
   color:#FFFFFF;
 }
 
 #exams li.activated:hover #exam-show-button{
-  background-color:#5D4660; 
+  background-color: #4488a1; 
   color:#FFFFFF; 
 }
 
 #exams li.activated:hover .exam-circle{
-  background-color: #BC9B94; 
+  background-color: #d1c3c0; 
 }
 
 #exams li.deactivated li:hover .exam-top{
