@@ -1,30 +1,39 @@
-<div class="main-content column col-md-9">
+<div class="main-content white material column col-md-9" id="show-exam">
     <div class="show-exam-content">
 
         <div class='row' id="row1">
-            <div class='col-md-6 col-md-offset-1' id='content'>
+            <div class='col-md-6' id='content'>
 
                 <h1 id='headline'>Tentamen
-                    <i class='glyphicon glyphicon-print'></i>
-                    <i class='glyphicon glyphicon-floppy-disk'></i>
+                    <span class='glyphicon glyphicon-print print-out' onclick="printOut()" data-toggle="tooltip" data-placement="bottom" title="Skriv ut tentamen"data-delay='{"show":"1500"}'></span>
+                    <span class='glyphicon glyphicon-floppy-disk save' data-toggle="tooltip" data-placement="bottom" title="Spara tentamen" data-delay='{"show":"1500"}'></span>
                 </h1>
 
                 <h3>{{exam.metaData.courseCode}} {{exam.metaData.name}}</h3>
                 <h4>{{exam.metaData.date| date:'yyyy-MM-dd'}}</h4>
             </div>
-            <div class='col-md-2 col-md-offset-1' id='label'>
+            <div class='col-md-2 col-md-offset-2' id='label'>
                 <span class='label label-info' id='points'>Poäng {{exam.points}}/{{exam.metaData.maxPoints}}</span>
             </div>
         </div>
     </div>
-    <div ng-repeat="question in exam.metaData.questions">
-        <h1>{{question.data}}</h1>
-        <h3>Ditt svar: </h3><p ng-bind-html="exam.answers[$index].data"></p>
-        <h4>Poäng {{exam.answers[$index].points}}/{{question.points}}</h4>
+    <div ng-repeat="question in exam.metaData.questions" id="question-content">
+        <div class="row" id="row1">
+            <div class='col-md-3'>
+                <h2 id="questionNr">Fråga X</h2>
+            </div>
+            <div class='col-md-2 col-md-offset-6'>
+                <span class='label label-primary' id="question-points">Poäng {{exam.answers[$index].points}}/{{question.points}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <h3 id="question">{{question.data}}</h3>
+            <h4>Ditt svar: </h4><p>{{exam.answers[$index].data}}</p>
+        </div>
     </div>
 </div>
 
-<div class="material column col-md-3 " id="show-exam-submenu">
+<div class="white material column col-md-3" id="show-exam-submenu">
 
     <h2><strong>Tentamen</strong></h2>
 
@@ -35,8 +44,9 @@
     <p id="examinator"><strong>Examinator: </strong>&nbsp;&nbsp;&nbsp;{{exam.metaData.examinator}}</p>
     <br>
 
-    <p id="contact"><a href="#"><i class='glyphicon glyphicon-envelope'></i> Kontakta examinator</a></p>
-    <br>
-
-    <p id="unhappy"><em>Funderar du på att överklaga din tentamen?</em><br><br>Läs mer i fliken för <a href="#">Information</a>
+    <p id="contact"><a href="/chat/main" id="a1"><i class='glyphicon glyphicon-comment'></i> Kontakta examinator</a>
+    <br><br>    
+    Du har alltid möjlighet att chatta med den tentamenansvariga examinatorns ifall du vill ha respons på din tentamen eller diskutera ditt resultat.
+    <br><br>
+    <em>Tänk på att du <strong>inte</strong> kan överklaga din tenta via chatten!</em> För att läsa mer om hur du går tillväga för att överklaga din tentamen, var vänlig se fliken för <a href="/information/reexam">Information</a></p>
 </div>

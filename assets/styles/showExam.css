@@ -27,12 +27,19 @@
   font-size: 40px;
 }
 
+#headline .glyphicon-print:hover,
+#headline .glyphicon-floppy-disk:hover{
+  cursor: pointer; 
+  color: #23527c;
+}
+
 .show-exam-content #row1 #content {
   padding: 20px 20px 0 0;
 }
 
 .show-exam-content #label {
-  padding: 30px;
+  padding: 50px 30px auto 30px;
+  margin-left: 170px;
 }
 
 .show-exam-content #exam-frame {
@@ -47,9 +54,6 @@
   position: relative;
 }
 
-#show-exam-submenu {
-  margin-top: 20px;
-}
 
 #show-exam-submenu #top {
   text-align: center;
@@ -72,18 +76,75 @@
   font-size: 15px;
 }
 
-#show-exam-submenu #contact {
+
+#question-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#question-content #row1 {
+  padding: 0;
+  margin-left: -30px;
+  margin-bottom: -20px;
+  border: 0;
+  border-top: 1px solid #e5e5e3;
+  padding-top: 50px;
+  overflow: hidden;
+}
+
+#question {
+  padding-top: 0;
+  margin-bottom: 30px;
+}
+
+#question-content #question-points {
+  width: 150px;
+  height: 40px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 10px;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+#show-exam-submenu #contact #a1 {
   font-size: 20px;
 }
 
-#show-exam-submenu .glyphicon-envelope {
-  font-size: 16px;
-}
-
-#show-exam-submenu #unhappy {
+#show-exam-submenu #contact p {
   font-size: 15px;
 }
-
-#show-exam-submenu #unhappy em{
-  font-size: 20px;
+#show-exam-submenu #contact {
+  border-top: 1px solid #e5e5e3;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
+#show-exam-submenu #a1:hover {
+  color: #23527c;
+}
+
+#show-exam {
+  margin-left: 0px;
+  margin-right: 34px;
+  padding: 40px 60px 40px 60px;
+}
+
+.show-exam-content {
+  margin-left: 15px;
+}
+
+#show-exam-submenu a,
+#show-exam-content a {
+  color: #4cadc0;
+  text-decoration: none;
+}
+
+#show-exam .tooltip-inner {
+  width: 120px; 
+}
+

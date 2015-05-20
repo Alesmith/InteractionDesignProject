@@ -7,5 +7,7 @@ $(document).tooltip({
 });
 
 $(document).tooltip({
-    selector: '.avi-info'
+    selector: '.save'
 });
+
+
