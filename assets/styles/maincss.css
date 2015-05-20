@@ -11,7 +11,7 @@
 
 .login-body {
 	background-repeat: repeat;
-	background-color: #fdb580;
+	background: linear-gradient(#ff7836, #fdb580);
 }
 
 .login-body1 {
