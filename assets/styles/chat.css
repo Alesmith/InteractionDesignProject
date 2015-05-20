@@ -1,0 +1,98 @@
+#chat {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#chat #chat-nav {
+  padding: 0;
+  margin: 0;
+  width: 302px;
+}
+
+#chat #chat-tabs {
+   float: left;
+   width: 350px;
+   padding: 0;
+   margin: 0;
+   clear: none;
+}
+
+#chat #chat-tabs ul {
+   list-style: none;
+   text-align: left;
+   padding: 0;
+   margin: 0;
+}
+
+#chat #chat-tabs ul li {
+   border-top: 2px solid #EAE9E4;
+   border-right: 2px solid #EAE9E4;
+   border-bottom: 2px solid #EAE9E4;
+   border-left: 10px solid #EAE9E4;
+   width: 300px;
+   padding: 0;
+   margin: 0;
+}
+
+#chat #chat-tabs ul li a {
+   text-decoration: none;
+   color: gray;
+   display: block;
+   padding: 15px 5px;
+   padding-left: 30px;
+}
+
+#chat #chat-tabs ul li:hover {
+   border-left: 8px solid rgba(75,172,198,0.9);
+}
+
+#chat #chat-tabs ul li a:hover {
+   color: #000;
+}
+
+#chat #chat-tabs ul li.selected {
+  border-color: #333;
+  border-left: 8px solid rgba(75,172,198,0.9);
+  border-right: none;
+  background-color: #fff;
+}
+
+#chat #tab-content {
+  margin: 0;
+  padding: 0;
+}
+
+#chat .tab-pane {
+  padding: 0;
+  margin: 0;
+}
+
+#chat textarea {
+  width: 867px;
+  margin: 0;
+  margin-left: -47px;
+  resize: none;
+  height: 145px;
+}
+
+#chat .conversation {
+  height: 438px;
+  width: 870px;
+}
+
+#chat .scrollable-menu {
+  height: 583px;
+  max-height: 583px;
+  overflow-x: hidden;
+}
+
+#chat .scrollable-menu::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+}    
+#chat .scrollable-menu::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: lightgray;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.75);        
+}

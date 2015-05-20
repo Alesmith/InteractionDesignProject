@@ -36,8 +36,8 @@ angular.module('alesmith')
                 .when('/information/rules', {
                     templateUrl: '/app/partials/rules.html'
                 })
-                .when('/chat/main', {
-                    templateUrl: '/app/partials/exams.html'
+                .when('/chat/chat', {
+                    templateUrl: '/app/partials/chat.html'
                 })
                 .when('/notifications/settings', {
                     templateUrl: '/app/partials/settings.html',
