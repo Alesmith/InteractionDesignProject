@@ -33,6 +33,7 @@
    width: 300px;
    padding: 0;
    margin: 0;
+   text-align: left;
 }
 
 #chat #chat-tabs ul li a {
@@ -49,6 +50,7 @@
 
 #chat #chat-tabs ul li a:hover {
    color: #000;
+   background-color: white;
 }
 
 #chat #chat-tabs ul li.selected {
@@ -78,7 +80,6 @@
 
 #chat .conversation {
   height: 438px;
-  width: 870px;
 }
 
 #chat .scrollable-menu {

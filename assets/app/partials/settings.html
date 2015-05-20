@@ -34,8 +34,6 @@
                         <input type="telephone" ng-model="user.phoneNumber" class="form-control" id="inputPhone"
                                placeholder="Mobilnummer">
                     </div>
-                    <button type="submit" class="btn btn-default" ng-click="update();">Spara ändringar</button>
-                    <button type="submit" class="btn btn-default">Avbryt</button>
                 </div>
             </div>
         </div>
@@ -101,7 +99,7 @@
             </div>
         </div>
         <div style="text-align: center;">
-            <button type="submit" class="btn btn-success">Spara ändringar</button>
+            <button type="submit" class="btn btn-success" ng-click="update()";>Spara ändringar</button>
             <button type="submit" class="btn btn-danger">Avbryt</button>
         </div>
     </div>

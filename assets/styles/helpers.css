@@ -111,3 +111,19 @@ div.main{
     margin-bottom: 5px;
     font-style: normal;
 }
+
+.nav-tabs li {
+    width: 140px;
+    text-align: center;
+    opacity: 0.9;
+    font-size: 13px;
+}
+
+#menu-alt{
+    color: #757575;
+    font-size: 13px;
+    border-right: 1px solid #EAE9E4;
+    padding-right: 5px;
+    text-decoration: none;
+    font-variant: normal;
+}
