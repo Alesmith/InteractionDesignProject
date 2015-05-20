@@ -99,3 +99,16 @@ div.main{
     padding-bottom:30px;
 }
 
+#logout-btn {
+  background-color: #b66662;
+  width: 100px;
+  height: 23px;
+  padding: 0;
+  margin: 0;
+}
+
+#profile-name-header {
+    font-size: 17px;
+    margin-bottom: 5px;
+    font-style: normal;
+}
