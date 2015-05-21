@@ -37,7 +37,8 @@ angular.module('alesmith')
                     templateUrl: '/app/partials/rules.html'
                 })
                 .when('/chat/chat', {
-                    templateUrl: '/app/partials/chat.html'
+                    templateUrl: '/app/partials/chat.html',
+                controller:"ChatController"
                 })
                 .when('/notifications/settings', {
                     templateUrl: '/app/partials/settings.html',

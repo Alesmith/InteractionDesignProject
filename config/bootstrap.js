@@ -57,7 +57,7 @@ var exams = [
     maxPoints: 60,
     points: 7.5,
     date: '2015-05-18T10:20:01.102Z',
-    questions: ["Hello?"],
+    questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
     courseCode: 'TIG059',
@@ -65,7 +65,7 @@ var exams = [
     maxPoints: 60,
     points: 7.5,
     date: '2015-05-18T10:20:01.102Z',
-    questions: ["Hello?"],
+    questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
     courseCode: 'TIG058',
@@ -73,7 +73,7 @@ var exams = [
     maxPoints: 60,
     points: 7.5,
     date: '2015-05-18T10:20:01.102Z',
-    questions: ["Hello?"],
+    questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
     courseCode: 'TIG016',
@@ -81,7 +81,7 @@ var exams = [
     maxPoints: 60,
     points: 7.5,
     date: '2015-05-18T10:20:01.102Z',
-    questions: ["Hello?"],
+    questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }];
 var users = [{

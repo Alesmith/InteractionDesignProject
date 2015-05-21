@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  overflow: scroll;
 }
 
 #chat #chat-nav {
@@ -48,9 +49,20 @@
    border-left: 8px solid rgba(75,172,198,0.9);
 }
 
+#chat #chat-tabs ul li:hover {
+  border-left: 8px solid rgba(75,172,198,0.9);
+}
+
 #chat #chat-tabs ul li a:hover {
    color: #000;
    background-color: white;
+}
+
+#chat #chat-tabs ul .current {
+  border-color: #333;
+  border-left: 8px solid rgba(75,172,198,0.9);
+  border-right: none;
+  background-color: #fff;
 }
 
 #chat #chat-tabs ul li.selected {
@@ -91,9 +103,21 @@
 #chat .scrollable-menu::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 6px;
-}    
+}
 #chat .scrollable-menu::-webkit-scrollbar-thumb {
     border-radius: 3px;
     background-color: lightgray;
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.75);        
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.75);
+}
+
+.message {
+
+}
+
+.fromUs {
+
+}
+
+.fromExaminator {
+
 }
