@@ -87,8 +87,8 @@ var exams = [
 var users = [{
   username: "gusfaraal", password: "123123",
   name: "Fridolf Karlsson",
-  birthday: "",
-  email:""
+  birthday: "1994-08-09-2343",
+  email:"gusfaraal@hgu.student.se"
 }];
 module.exports.bootstrap = function (cb) {
   // It's very important to trigger this callback method when you are finished
