@@ -84,7 +84,12 @@ var exams = [
     questions: ["Hello?"],
     examinator: "Kjell Engberg"
   }];
-
+var users = [{
+  username: "gusfaraal", password: "123123",
+  name: "Fridolf Karlsson",
+  birthday: "",
+  email:""
+}];
 module.exports.bootstrap = function (cb) {
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your wserver will never lift, since it's waiting on the bootstrap)
@@ -92,7 +97,7 @@ module.exports.bootstrap = function (cb) {
     console.log(found);
     if (found.length === 0) {
       console.log("no user");
-      User.create({username: "gusfaraal", password: "123123"}).exec(function () {
+      User.create(users).exec(function () {
         Exam.create(exams).exec(function () {
           WrittenExam.create(writtenExam).exec(function () {
             cb();
