@@ -2,7 +2,7 @@
     <div class="wrap" id="wrap">
         <div class="table" id="exams">
             <ul>
-                <li ng-repeat="exam in exams">
+                <li ng-repeat="exam in exams" ng-class="{activated:isPublished(exam)}">
                     <div class="exam-top">
                         <h2 id="course-code">{{exam.metaData.courseCode}}</h2>
 
@@ -18,8 +18,9 @@
                       <div class="sign-in" ng-hide="isPublished(exam)"><a class="button"  id="exam-show-button-hide" > 15 dagar
                         kvar</a></div>
 
-                        <div class="sign-in" ng-show="isPublished(exam)"><a class="button" id="exam-show-button-show" href="/exam/{{exam.id}}"> 15 dagar
-                            kvar</a></div>{{isPublished(exam)}}
+                        <div class="sign-in" ng-show="isPublished(exam)"><a class="button" id="exam-show-button-show" href="/exam/{{exam.id}}">
+                          Visa Tenta
+                        </a></div>
                     </div>
                 </li>
             </ul>
