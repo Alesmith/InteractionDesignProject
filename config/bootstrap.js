@@ -47,7 +47,7 @@ var exams = [
     name: "Affärssystem",
     maxPoints: 60,
     points: 7.5,
-    date: '2015-05-31T10:20:01.102Z',
+    date: '2015-05-18T10:20:01.102Z',
     questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
@@ -88,7 +88,7 @@ var users = [{
   username: "gusfaraal", password: "123123",
   name: "Fridolf Karlsson",
   birthday: "1994-08-09-2343",
-  email:"gusfaraal@hgu.student.se"
+  email:"gusfaraal@gu.student.se"
 }];
 module.exports.bootstrap = function (cb) {
   // It's very important to trigger this callback method when you are finished
