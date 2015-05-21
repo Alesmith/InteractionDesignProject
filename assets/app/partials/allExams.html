@@ -15,8 +15,11 @@
 
                         <p id="exam-date">{{exam.metaData.date| date:'yyyy-MM-dd'}}</p>
 
-                        <div class="sign-in"><a class="button" id="exam-show-button" href="/exam/{{exam.id}}"> 15 dagar
-                            kvar</a></div>
+                      <div class="sign-in" ng-hide="isPublished(exam)"><a class="button"  id="exam-show-button-hide" > 15 dagar
+                        kvar</a></div>
+
+                        <div class="sign-in" ng-show="isPublished(exam)"><a class="button" id="exam-show-button-show" href="/exam/{{exam.id}}"> 15 dagar
+                            kvar</a></div>{{isPublished(exam)}}
                     </div>
                 </li>
             </ul>

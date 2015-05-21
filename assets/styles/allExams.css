@@ -11,10 +11,10 @@
 }
 
 #exams {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   height: 325px;
   width: 100%;
-  margin-top: 50px;  
+  margin-top: 50px;
   list-style-type: none;
 
 }
@@ -60,7 +60,7 @@
   border-radius:60px;
   font-size:20px;
   color:#fff;
-  line-height:60px; 
+  line-height:60px;
   text-align:center;
   background:#989A8F;
   margin-left: 80px;
@@ -86,14 +86,14 @@
 }
 
 .exam-bottom p span {
-  font-weight:bold; 
+  font-weight:bold;
 }
 
 .sign-in {
   margin-top:50px;
 }
 
-#exam-show-button {
+#exam-show-button-show {
    border: 1px solid #989A8F;
    padding: 10px 40px;
    -webkit-border-radius: 6px;
@@ -106,22 +106,36 @@
    font-size:17px;
 }
 
+#exam-show-button-hide {
+  cursor:not-allowed;
+  border: 1px solid #989A8F;
+  padding: 10px 40px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  color: #989A8F;
+  font-size: 14px;
+  text-decoration: none;
+  vertical-align: middle;
+  font-size:17px;
+}
+
 #exams li.activated:hover .exam-top{
-  background-color: #4488a1;   
+  background-color: #4488a1;
   color:#FFFFFF;
 }
 
 #exams li.activated:hover #exam-show-button{
-  background-color: #4488a1; 
-  color:#FFFFFF; 
+  background-color: #4488a1;
+  color:#FFFFFF;
 }
 
 #exams li.activated:hover .exam-circle{
-  background-color: #d1c3c0; 
+  background-color: #d1c3c0;
 }
 
 #exams li.deactivated li:hover .exam-top{
-  color: #eae9e4; 
+  color: #eae9e4;
   background-color:#EAE9E4;
 }
 
