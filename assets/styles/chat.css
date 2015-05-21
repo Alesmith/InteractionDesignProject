@@ -110,14 +110,21 @@
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.75);
 }
 
-.message {
+div.message {
 
+    margin-top:15px;
 }
-
+div.message span {
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:5px;
+}
 .fromUs {
-
+    background-color: #869bcc;
+    color:#FFF;
 }
 
 .fromExaminator {
-
+    background-color:#cccccc;
 }

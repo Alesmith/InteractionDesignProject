@@ -16,20 +16,18 @@
     <div id="tab-content" class="tab-content col-md-7" style="height:100%">
         <div style="height:100%">
             <div style="overflow:auto; height:100%;">
-                <div ng-repeat="message in exams[currentChat].chat">
-                    {{message}}
-                    <div ng-show="message.fromUs" class="fromUs">
-                        <div class="message">
-                            {{message.data}}
-                        </div>
+                <div ng-repeat="message in exams[currentChat].chat track by $index">
+                    <div ng-show="message.fromUs" class="text-right message">
+                        <span class="fromUs">{{message.data}}</span>
                     </div>
-                    <div ng-hide="message.fromUs" class="fromExaminator">
-                        <div class="message">
-                            {{message.data}}
-                        </div>
-                    </div>
-                </div>
 
+                    <div ng-hide="message.fromUs" class="message">
+                        <span class="fromExaminator">{{message.data}}</span>
+                    </div>
+
+                </div>
+                <br> <br> <br> <br> <br>
+                <a id="bottom"></a>
             </div>
         </div>
         <div style="position:absolute; bottom:0px; width:100%; padding-top:10px; background: #fff">
