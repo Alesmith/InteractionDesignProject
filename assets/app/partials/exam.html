@@ -20,7 +20,7 @@
     <div ng-repeat="question in exam.metaData.questions" id="question-content">
         <div class="row" id="row1">
             <div class='col-md-3'>
-                <h2 id="questionNr">Fråga X</h2>
+                <h2 id="questionNr">Fråga {{$index+1}}</h2>
             </div>
             <div class='col-md-2 col-md-offset-6'>
                 <span class='label label-primary' id="question-points">Poäng {{exam.answers[$index].points}}/{{question.points}}</span>
@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <h3 id="question">{{question.data}}</h3>
-            <h4>Ditt svar: </h4><p>{{exam.answers[$index].data}}</p>
+            <h4>Ditt svar: </h4><p ng-bind-html="exam.answers[$index].data"></p>
         </div>
     </div>
 </div>
