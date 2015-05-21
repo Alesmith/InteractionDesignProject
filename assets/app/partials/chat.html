@@ -3,7 +3,7 @@
     <div class="col-md-5" id="chat-tabs" role="navigation">
         <ul class="nav nav-tabs scrollable-menu" id="chat-nav" role="tablist" data-tabs="tabs">
             <li ng-repeat="exam in exams" ng-click="setCurrentChat($index)" ng-class="{current:$index===currentChat}"><a
-                    data-toggle="tab" href="#0">
+                    data-toggle="tab">
                 <h3 id="course">{{exam.metaData.courseCode}} {{exam.name}}
                     <small style="padding-left: 10px">{{exam.grade}}</small>
                 </h3>
