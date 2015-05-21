@@ -34,9 +34,9 @@
                 </div>
             </div>
         </div>
-        <div class="container material tab-content" style="background-color:white">
-            <div class="tab-pane fade in active" style="padding-top:10px; padding-bottom: 10px;">
-                <small>
+        <div class="container material tab-content" style="background-color:white" >
+            <div class="tab-pane fade in active" style="padding-top:10px; padding-bottom: 10px;" >
+                <small ng-show="menu[tabSelected].links.length!==1">
 
                     <a ng-repeat="link in menu[tabSelected].links" href="{{link.link}}"
                        ng-class="{active:getActive(link.link)}" style="margin-right:10px; " id="menu-alt">{{link.text}}</a>
