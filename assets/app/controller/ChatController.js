@@ -4,9 +4,9 @@
 
 angular.module("alesmith").controller("ChatController", ChatController);
 
-ChatController.$inject = ["$scope", "$sails", "$rootScope", "$location", "$anchorScroll", '$timeout'];
+ChatController.$inject = ["$scope", "$sails", "$rootScope"];
 
-function ChatController($scope, $sails, $rootScope, $location, $anchorScroll, $timeout) {
+function ChatController($scope, $sails, $rootScope) {
 
     refresh(false);
     $scope.currentChat = 0;
@@ -28,10 +28,6 @@ function ChatController($scope, $sails, $rootScope, $location, $anchorScroll, $t
     function update() {
         var exam = $scope.exams[$scope.currentChat];
         $sails.put('/v1/writtenExam/' + exam.id, exam).success(function () {
-            $timeout(function () {
-                $location.hash('bottom');
-                $anchorScroll();
-            }, 100);
         });
     }
 

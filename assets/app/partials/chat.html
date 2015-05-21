@@ -15,7 +15,7 @@
 
     <div id="tab-content" class="tab-content col-md-7" style="height:100%">
         <div style="height:100%">
-            <div style="overflow:auto; height:100%;">
+            <div style="overflow:auto; height:100%;" scroll-bottom="exams[currentChat]">
                 <div ng-repeat="message in exams[currentChat].chat track by $index">
                     <div ng-show="message.fromUs" class="text-right message">
                         <span class="fromUs">{{message.data}}</span>
@@ -26,7 +26,7 @@
                     </div>
 
                 </div>
-                <br> <br> <br> <br> <br>
+                <br> <br> <br>
                 <a id="bottom"></a>
             </div>
         </div>

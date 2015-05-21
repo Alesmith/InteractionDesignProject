@@ -36,7 +36,7 @@ function AppController($scope, $location, $http, $rootScope, $window) {
     $scope.menu.push({
         title: "MEDDELANDEN",
         prefix: "chat",
-        links: [{link: '/chat/chat', text: ''}]
+        links: [{link: '/chat/chat#bottom', text: ''}]
     });
     $scope.menu.push({
         title: "INFORMATION",
