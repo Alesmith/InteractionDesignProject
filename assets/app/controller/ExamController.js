@@ -34,7 +34,7 @@ function ExamController($scope, $sails, $routeParams, $sce, $timeout) {
         var data = answer.data;
         for (var key in answer.comments) {
             var comment = answer.comments[key];
-            data = data.replace(">-", "<span style='background-color:" + comment.color + ";' data-toggle='tooltip' data-placement'top' title='" + comment.data + "'>");
+            data = data.replace(">-", "<span style='background-color:" + comment.color + ";' data-toggle='tooltip' data-placement='top' title='" + comment.data + "'>");
             data = data.replace("-<", "</span>");
         }
         return data;
