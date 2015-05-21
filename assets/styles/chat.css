@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  overflow: scroll;
+
 }
 
 #chat #chat-nav {
@@ -91,7 +91,7 @@
 }
 
 #chat .conversation {
-  height: 438px;
+  height: 100%;
 }
 
 #chat .scrollable-menu {
