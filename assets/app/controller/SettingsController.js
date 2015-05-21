@@ -18,9 +18,7 @@ function SettingsController($scope, $sails, $http,$timeout) {
     $scope.update = function () {
         console.log($scope.user);
         $timeout(function() {$http.put("/v1/user/" + $scope.user.id, $scope.user).success(function (data) {
-
         });},100);
-
     };
     $scope.refresh = function () {
         refresh();
@@ -33,4 +31,17 @@ function SettingsController($scope, $sails, $http,$timeout) {
             $scope.user = data;
         });
     }
+    function saveConf() {
+        alert("Dina ändringar är sparade");
+    }
+
+    function dontSaveConf() {
+        var x;
+        if (confirm("Är du säker på att du inte vill spara dina ändringar?") == true) {
+            x = "Ja";
+        } else {
+            x = "Nej";
+        }
+    }
+
 }

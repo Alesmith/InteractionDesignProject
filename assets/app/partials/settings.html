@@ -20,7 +20,7 @@
 
     <div class=" col-md-5 col-md-offset-1" id="setting-panels">
 
-        <form data-toggle="validator" role="form">
+        <form data-toggle="validator" role="form" id="settings-form">
             <div class='panel panel-info'>
 
                 <div class='panel-heading'>
@@ -94,15 +94,15 @@
                             <input type="password" class="form-control" data-min-length="6" id="inputPassword2" placeholder="Lösenord" title="Du måste ha minst 6 tecken i ditt lösenord">
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3">Skriv in det nya lösenordet igen</label>
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Lösenord" data-match="#inputPassword2" data-match-error="Lösenorden matchar inte varandra">
+                            <label for="inputPassword3">Bekräfta det nya lösenordet</label>
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Lösenord" data-validation-matches-match="#inputPassword2" data-validation-matches-message="Lösenorden matchar inte varandra">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center;">
-                <button type="submit" class="btn btn-success" onclick="saveConf()" ng-click="update()";>Spara ändringar
+                <button type="submit" class="btn btn-success"  ng-click="update()";>Spara ändringar
                 </button>
                 <button type="submit" onclick="dontSaveConf()" class="btn btn-danger">Avbryt</button>
             </div>
