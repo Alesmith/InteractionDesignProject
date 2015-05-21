@@ -57,38 +57,38 @@ var exams = [
     maxPoints: 60,
     points: 7.5,
     date: '2015-05-18T10:20:01.102Z',
-    questions: ["Hello?"],
+    questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
-    courseCode: 'Tig059',
+    courseCode: 'TIG059',
     name: "Systemprojekt",
     maxPoints: 60,
     points: 7.5,
     date: '2015-05-18T10:20:01.102Z',
-    questions: ["Hello?"],
+    questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
-    courseCode: 'Tig058',
+    courseCode: 'TIG058',
     name: "Databasteknik",
     maxPoints: 60,
     points: 7.5,
     date: '2015-05-18T10:20:01.102Z',
-    questions: ["Hello?"],
+    questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
-    courseCode: 'Tig016',
+    courseCode: 'TIG016',
     name: "Verksamheter och information",
     maxPoints: 60,
     points: 7.5,
     date: '2015-05-18T10:20:01.102Z',
-    questions: ["Hello?"],
+    questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }];
 var users = [{
   username: "gusfaraal", password: "123123",
   name: "Fridolf Karlsson",
-  birthday: "",
-  email:""
+  birthday: "1994-08-09-2343",
+  email:"gusfaraal@gu.student.se"
 }];
 module.exports.bootstrap = function (cb) {
   // It's very important to trigger this callback method when you are finished

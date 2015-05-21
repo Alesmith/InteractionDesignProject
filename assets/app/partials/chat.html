@@ -1,41 +1,27 @@
 <div class="main-content white material column col-md-12" id="chat">
 
     <div class="col-md-5" id="chat-tabs" role="navigation">
-        
+
         <ul class="nav nav-tabs scrollable-menu" id="chat-nav" role="tablist" data-tabs="tabs">
-            <li><a data-toggle="tab" href="#0">
-                <h3 id="examinator">Förnamn Efternamn</h3>
-                <h4 id="course">TIGXXX Kursnamn</h4>
-                <h5 id="exam-date">YYYY-MM-DD</h5>
+            <li ng-repeat="exam in exams" ng-click="setCurrentChat($index)" ng-class="{current:$index===currentChat}"><a data-toggle="tab" href="#0">
+              <h3 id="course">{{exam.metaData.courseCode}} {{exam.name}}<small style="padding-left: 10px">{{exam.grade}}</small></h3>
+              <h4 id="examinator">{{exam.metaData.examinator}}</h4>
+                <h5 id="exam-date">{{exam.metaData.date |date:"yyyy-MM-dd"}}</h5>
             </a></li>
-            <li><a data-toggle="tab" href="#2">
-                <h3 id="examinator">Förnamn Efternamn</h3>
-                <h4 id="course">TIGXXX Kursnamn</h4>
-                <h5 id="exam-date">YYYY-MM-DD</h5>
-            </a></li>
-            <li><a data-toggle="tab" href="#3">
-                <h3 id="examinator">Förnamn Efternamn</h3>
-                <h4 id="course">TIGXXX Kursnamn</h4>
-                <h5 id="exam-date">YYYY-MM-DD</h5>
-            </a></li>
-            <li><a data-toggle="tab" href="#4">
-                <h3 id="examinator">Förnamn Efternamn</h3>
-                <h4 id="course">TIGXXX Kursnamn</h4>
-                <h5 id="exam-date">YYYY-MM-DD</h5>
-            </a></li>
-            <li><a data-toggle="tab" href="#5">
-                <h3 id="examinator">Förnamn Efternamn</h3>
-                <h4 id="course">TIGXXX Kursnamn</h4>
-                <h5 id="exam-date">YYYY-MM-DD</h5>
-            </a></li>
-        </ul> 
+        </ul>
     </div>
 
     <div id="tab-content" class="tab-content col-md-7">
-        <div class="conversation">
+        <div class="conversation"><div ng-repeat="message in exams[currentChat].chat">
+          {{message}}
+          <div ng-show="message.fromUs" class="message fromUs">{{message.data}}</div>
+          <div ng-hide="message.fromUs" class="message fromExaminator">{{message.data}}</div>
+        </div>
         </div>
         <div class="tab-pane active">
-            <textarea class="form-control" placeholder="Skriv ett meddelande och tryck enter för att skicka..."></textarea>
+            <form ng-submit="sendMessage(chatText)">
+              <input ng-model="chatText" class="form-control" placeholder="Skriv ett meddelande och tryck enter för att skicka...">
+            </form>
         </div>
     </div>
 </div>
