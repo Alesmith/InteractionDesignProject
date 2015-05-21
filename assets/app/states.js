@@ -44,6 +44,10 @@ angular.module('alesmith')
                     templateUrl: '/app/partials/settings.html',
                     controller:'SettingsController'
                 })
+                .when('/support/help', {
+                    templateUrl: '/app/partials/help.html',
+                    controller:'SettingsController'
+                })
                 .otherwise({
                     redirectTo: '/exam/all'
                 });

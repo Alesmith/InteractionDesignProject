@@ -64,7 +64,7 @@ function AppController($scope, $location, $http, $rootScope, $window) {
                 link: '/information/contact', text: 'Kontaktinformation'
             },
             {
-                link: '/information/contact', text: 'Hjälp'
+                link: '/support/help', text: 'Hjälp'
             }
         ]
     });

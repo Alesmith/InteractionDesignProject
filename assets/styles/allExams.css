@@ -109,7 +109,7 @@
 #exam-show-button-hide {
   cursor:not-allowed;
   border: 1px solid #989A8F;
-  padding: 10px 40px;
+  padding: 10px 45px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -125,7 +125,7 @@
   color:#FFFFFF;
 }
 
-#exams li.activated:hover #exam-show-button{
+#exams li.activated:hover #exam-show-button-show{
   background-color: #4488a1;
   color:#FFFFFF;
 }
@@ -139,7 +139,7 @@
   background-color:#EAE9E4;
 }
 
-#exams li.deactivated li:hover #exam-show-button{
+#exams li.deactivated li:hover #exam-show-button-hide{
   background-color: #FFFFFF;
   color: #989a8f;
 }
