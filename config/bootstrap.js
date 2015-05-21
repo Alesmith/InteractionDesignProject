@@ -56,7 +56,7 @@ var exams = [
     name: "E-Business",
     maxPoints: 60,
     points: 7.5,
-    date: '2015-05-18T10:20:01.102Z',
+    date: '2015-05-01T10:20:01.102Z',
     questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
@@ -64,7 +64,7 @@ var exams = [
     name: "Systemprojekt",
     maxPoints: 60,
     points: 7.5,
-    date: '2015-05-18T10:20:01.102Z',
+    date: '2015-06-10T10:20:01.102Z',
     questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
@@ -72,7 +72,7 @@ var exams = [
     name: "Databasteknik",
     maxPoints: 60,
     points: 7.5,
-    date: '2015-05-18T10:20:01.102Z',
+    date: '2015-06-10T10:20:01.102Z',
     questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {
@@ -80,7 +80,7 @@ var exams = [
     name: "Verksamheter och information",
     maxPoints: 60,
     points: 7.5,
-    date: '2015-05-18T10:20:01.102Z',
+    date: '2015-06-10T10:20:01.102Z',
     questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }];
