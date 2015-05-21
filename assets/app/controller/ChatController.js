@@ -4,11 +4,12 @@
 
 angular.module("alesmith").controller("ChatController", ChatController);
 
-ChatController.$inject = ["$scope", "$sails", "$rootScope"];
+ChatController.$inject = ["$scope", "$sails", "$rootScope","$location"];
 
-function ChatController($scope, $sails, $rootScope) {
+function ChatController($scope, $sails, $rootScope,$location) {
 
-    refresh(false);
+    refresh(true);
+
     $scope.currentChat = 0;
 
     $scope.setCurrentChat = function (index) {
@@ -35,9 +36,20 @@ function ChatController($scope, $sails, $rootScope) {
         refresh();
     });
 
-    function refresh() {
+    function refresh(bool) {
+
         $sails.get("/v1/writtenExam?writtenBy=" + $rootScope.user.id).success(function (data) {
             $scope.exams = data;
+            if (bool) {
+                for(var key in data) {
+                    var exam = data[key];
+                    console.log(exam,$location.search().id);
+                    if (exam.id === parseInt($location.search().id)) {
+                        $scope.currentChat = key;
+                        console.log($scope.currentChat);
+                    }
+                }
+            }
             console.log(data);
         });
     }
