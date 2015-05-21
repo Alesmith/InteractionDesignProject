@@ -60,7 +60,7 @@ var exams = [
     questions: ["Hello?"],
     examinator: "Kjell Engberg"
   }, {
-    courseCode: 'Tig059',
+    courseCode: 'TIG059',
     name: "Systemprojekt",
     maxPoints: 60,
     points: 7.5,
@@ -68,7 +68,7 @@ var exams = [
     questions: ["Hello?"],
     examinator: "Kjell Engberg"
   }, {
-    courseCode: 'Tig058',
+    courseCode: 'TIG058',
     name: "Databasteknik",
     maxPoints: 60,
     points: 7.5,
@@ -76,7 +76,7 @@ var exams = [
     questions: ["Hello?"],
     examinator: "Kjell Engberg"
   }, {
-    courseCode: 'Tig016',
+    courseCode: 'TIG016',
     name: "Verksamheter och information",
     maxPoints: 60,
     points: 7.5,
