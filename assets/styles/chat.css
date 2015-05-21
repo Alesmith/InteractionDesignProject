@@ -59,10 +59,11 @@
 }
 
 #chat #chat-tabs ul .current {
-  border-color: #333;
+  border-color: rgba(75,172,198,0.4);
   border-left: 8px solid rgba(75,172,198,0.9);
   border-right: none;
-  background-color: #fff;
+  background-color: #ffffff;
+  
 }
 
 #chat #chat-tabs ul li.selected {
@@ -82,7 +83,7 @@
   margin: 0;
 }
 
-#chat textarea {
+#chat #chatTextBox {
   width: 867px;
   margin: 0;
   margin-left: -47px;

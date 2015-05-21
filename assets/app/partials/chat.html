@@ -1,6 +1,6 @@
 <div class="main-content white material column col-md-12" id="chat" style="height:500px">
 
-    <div class="col-md-5" id="chat-tabs" role="navigation">
+    <div class="col-md-3" id="chat-tabs" role="navigation">
         <ul class="nav nav-tabs scrollable-menu" id="chat-nav" role="tablist" data-tabs="tabs">
             <li ng-repeat="exam in exams" ng-click="setCurrentChat($index)" ng-class="{current:$index==currentChat}"><a
                     data-toggle="tab">
@@ -32,7 +32,7 @@
         </div>
         <div style="position:absolute; bottom:0px; width:100%; padding-top:10px; background: #fff">
             <form ng-submit="sendMessage(chatText)">
-                <input ng-model="chatText" class="form-control"
+                <input ng-model="chatText" class="form-control" id="chatTextBox"
                        placeholder="Skriv ett meddelande och tryck enter för att skicka...">
             </form>
         </div>
