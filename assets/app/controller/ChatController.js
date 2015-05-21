@@ -8,7 +8,7 @@ ChatController.$inject = ["$scope", "$sails", "$rootScope", "$location", "$ancho
 
 function ChatController($scope, $sails, $rootScope, $location, $anchorScroll, $timeout) {
 
-    refresh();
+    refresh(false);
     $scope.currentChat = 0;
 
     $scope.setCurrentChat = function (index) {
@@ -42,10 +42,6 @@ function ChatController($scope, $sails, $rootScope, $location, $anchorScroll, $t
     function refresh() {
         $sails.get("/v1/writtenExam?writtenBy=" + $rootScope.user.id).success(function (data) {
             $scope.exams = data;
-            $timeout(function () {
-                $location.hash('bottom');
-                $anchorScroll();
-            }, 500);
             console.log(data);
         });
     }
