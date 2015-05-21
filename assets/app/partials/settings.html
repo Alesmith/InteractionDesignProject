@@ -32,9 +32,10 @@
                     <div class='panel-body'>
 
                         <div class="form-group">
-                            <input type="tel" pattern="^(?:\(\d{3}\)|\d{3})[- . ]?\d{3}[- . ]?\d{2}[- . ]?\d{2}$" ng-model="user.phoneNumber" class="form-control" id="inputPhone"
-                            placeholder="Mobilnummer"
-                            title="Skriv ditt telefonnummer utan mellanslag eller tecken. Tänk på att ditt telefonnummer bör vara 10 siffror!">
+                            <input type="tel" pattern="^(?:\(\d{3}\)|\d{3})[- . ]?\d{3}[- . ]?\d{2}[- . ]?\d{2}$"
+                                   ng-model="user.phoneNumber" class="form-control" id="inputPhone"
+                                   placeholder="Mobilnummer"
+                                   title="Skriv ditt telefonnummer utan mellanslag eller tecken. Tänk på att ditt telefonnummer bör vara 10 siffror!">
                         </div>
                     </div>
                 </div>
@@ -69,7 +70,7 @@
                                     <label>
                                         <input type="checkbox" id="sms-check" ng-model="user.notification.sms">
 
-                                        <p class="checkbox-text" >Via SMS</p></input>
+                                        <p class="checkbox-text">Via SMS</p></input>
                                     </label>
                                 </div>
                             </div>
@@ -86,23 +87,28 @@
                     <div class='panel-body'>
                         <div class="form-group">
                             <label for="inputPassword1">Nuvarande lösenord</label>
-                            <input type="password"  class="form-control" id="inputPassword1" placeholder="Lösenord" data-match="{{users.password}}">
+                            <input type="password" class="form-control" id="inputPassword1" placeholder="Lösenord"
+                                   data-match="{{users.password}}">
                         </div>
+
 
                         <div class="form-group">
                             <label for="inputPassword2">Nytt lösenord</label>
-                            <input type="password" class="form-control" data-min-length="6" id="inputPassword2" placeholder="Lösenord" title="Du måste ha minst 6 tecken i ditt lösenord">
+                            <input type="password" class="form-control" data-min-length="6" id="inputPassword2"
+                                   placeholder="Lösenord" ng-model="user.password" title="Du måste ha minst 6 tecken i ditt lösenord">
                         </div>
                         <div class="form-group">
                             <label for="inputPassword3">Bekräfta det nya lösenordet</label>
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Lösenord" data-validation-matches-match="#inputPassword2" data-validation-matches-message="Lösenorden matchar inte varandra">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Lösenord"
+                                   data-validation-matches-match="#inputPassword2"
+                                   data-validation-matches-message="Lösenorden matchar inte varandra">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center;">
-                <button type="submit" class="btn btn-success"  ng-click="update()";>Spara ändringar
+                <button type="submit" class="btn btn-success" ng-click="update()" ;>Spara ändringar
                 </button>
                 <button type="submit" onclick="dontSaveConf()" class="btn btn-danger">Avbryt</button>
             </div>

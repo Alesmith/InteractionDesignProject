@@ -1,27 +1,45 @@
-<div class="main-content white material column col-md-12" id="chat">
+<div class="main-content white material column col-md-12" id="chat" style="height:500px">
 
     <div class="col-md-5" id="chat-tabs" role="navigation">
-
         <ul class="nav nav-tabs scrollable-menu" id="chat-nav" role="tablist" data-tabs="tabs">
-            <li ng-repeat="exam in exams" ng-click="setCurrentChat($index)" ng-class="{current:$index===currentChat}"><a data-toggle="tab" href="#0">
-              <h3 id="course">{{exam.metaData.courseCode}} {{exam.name}}<small style="padding-left: 10px">{{exam.grade}}</small></h3>
-              <h4 id="examinator">{{exam.metaData.examinator}}</h4>
+            <li ng-repeat="exam in exams" ng-click="setCurrentChat($index)" ng-class="{current:$index===currentChat}"><a
+                    data-toggle="tab" href="#0">
+                <h3 id="course">{{exam.metaData.courseCode}} {{exam.name}}
+                    <small style="padding-left: 10px">{{exam.grade}}</small>
+                </h3>
+                <h4 id="examinator">{{exam.metaData.examinator}}</h4>
                 <h5 id="exam-date">{{exam.metaData.date |date:"yyyy-MM-dd"}}</h5>
             </a></li>
         </ul>
     </div>
 
-    <div id="tab-content" class="tab-content col-md-7">
-        <div class="conversation"><div ng-repeat="message in exams[currentChat].chat">
-          {{message}}
-          <div ng-show="message.fromUs" class="message fromUs">{{message.data}}</div>
-          <div ng-hide="message.fromUs" class="message fromExaminator">{{message.data}}</div>
+    <div id="tab-content" class="tab-content col-md-7" style="height:100%">
+        <div style="height:100%">
+            <div style="overflow:auto; height:100%;">
+                <div ng-repeat="message in exams[currentChat].chat">
+                    {{message}}
+                    <div ng-show="message.fromUs" class="fromUs">
+                        <div class="message">
+                            {{message.data}}
+                        </div>
+                    </div>
+                    <div ng-hide="message.fromUs" class="fromExaminator">
+                        <div class="message">
+                            {{message.data}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        </div>
-        <div class="tab-pane active">
+        <div style="position:absolute; bottom:0px; width:100%; padding-top:10px; background: #fff">
             <form ng-submit="sendMessage(chatText)">
-              <input ng-model="chatText" class="form-control" placeholder="Skriv ett meddelande och tryck enter för att skicka...">
+                <input ng-model="chatText" class="form-control"
+                       placeholder="Skriv ett meddelande och tryck enter för att skicka...">
             </form>
         </div>
+
+
     </div>
+
 </div>
