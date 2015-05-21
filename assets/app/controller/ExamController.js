@@ -14,7 +14,6 @@ function ExamController($scope, $sails, $routeParams, $sce, $timeout) {
     refresh();
     $sails.on("writtenexam", function (message) {
         refresh();
-
     });
     function refresh() {
         $sails.get("/v1/writtenExam/" + $routeParams.id).success(function (data) {
