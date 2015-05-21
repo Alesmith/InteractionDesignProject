@@ -7,14 +7,14 @@
             <img style="width:275px;" src="images/user-profile.jpg" id="profilepicture">
 
             <div class="form-group">
-                <div class="fileUpload btn btn-info">
+                <div class="fileUpload btn btn-primary">
                     <span>Ändra profilbild</span>
                     <input type="file" class="upload"/>
                 </div>
             </div>
-            <h2 id="name">Förnamn Efternamn</h2>
-            <h4 id="birth">yyyy-mm-dd-xxxx</h4>
-            <h5 id="email">mail@student.gu.se</h5>
+            <h2 id="name">{{user.name}}</h2>
+            <h4 id="birth">{{user.birthday}}</h4>
+            <h5 id="email">{{user.email}}</h5>
         </div>
     </div>
 
@@ -99,8 +99,9 @@
             </div>
         </div>
         <div style="text-align: center;">
-            <button type="submit" class="btn btn-success" ng-click="update()";>Spara ändringar</button>
-            <button type="submit" class="btn btn-danger">Avbryt</button>
+            <button type="submit" class="btn btn-success" onclick="saveConf()" ng-click="update()";>Spara ändringar
+            </button>
+            <button type="submit" onclick="dontSaveConf()" class="btn btn-danger">Avbryt</button>
         </div>
     </div>
 </div>
