@@ -12,7 +12,6 @@ function AppController($scope, $location, $http, $rootScope, $window) {
     $scope.tabSelected = -1;
     ////////////////
     $http.get('/v1/user/current').success(function (user) {
-        console.log(user,"lol")
         $rootScope.user = user;
     }).error(function () {
         $window.location = "/login";
