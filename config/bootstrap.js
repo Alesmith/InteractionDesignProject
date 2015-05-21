@@ -47,7 +47,7 @@ var exams = [
     name: "Affärssystem",
     maxPoints: 60,
     points: 7.5,
-    date: '2015-05-18T10:20:01.102Z',
+    date: '2015-05-31T10:20:01.102Z',
     questions: [{data: "Hello?", points: 10}],
     examinator: "Kjell Engberg"
   }, {

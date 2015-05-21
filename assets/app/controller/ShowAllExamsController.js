@@ -23,12 +23,20 @@ function ShowAllExamsController($scope, $sails, $rootScope, $timeout) {
     return !!exam.grade;
   }
 
+  $scope.daysLeft = function(exam){
+    var examDate = exam.metaData.date;
+    var remainingMS = new Date(examDate) - new Date();
+    var remainingDays = remainingMS / (1000*60*60*24);
+    return Math.floor(remainingDays);
+  }
+
   function refresh() {
     $sails.get("/v1/writtenExam?writtenBy=" + $rootScope.user.id).success(function (data) {
       $scope.exams = data;
 
       for (var key in $scope.exams){
         var exam = $scope.exams[key];
+
         exam.isPublished = function(){
           console.log(exam.grade);
           return !!exam.grade;
