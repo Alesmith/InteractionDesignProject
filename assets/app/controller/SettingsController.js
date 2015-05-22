@@ -15,14 +15,21 @@ function SettingsController($scope, $sails, $http, $timeout) {
         $scope.user = data;
         console.log($scope.user);
     });
-    $scope.update = function () {
+    $scope.update = function() {
         $scope.user.password = $scope.password;
         $http.put("/v1/user/" + $scope.user.id, $scope.user).success(function (data) {
+            alert("Dina ändringar är sparade");
         });
     };
-    $scope.refresh = function () {
+    $scope.refresh = function() {
         refresh();
-    }
+    };
+    $scope.confirmCancel = function() {
+        var cancel = confirm("Är du säker på att du inte vill spara dina ändringar?");
+        if (cancel) {
+            refresh();
+        }
+    };
     $sails.on("user", function (message) {
         refresh();
     });
@@ -32,17 +39,5 @@ function SettingsController($scope, $sails, $http, $timeout) {
         });
     }
 
-    function saveConf() {
-        alert("Dina ändringar är sparade");
-    }
-
-    function dontSaveConf() {
-        var x;
-        if (confirm("Är du säker på att du inte vill spara dina ändringar?") == true) {
-            x = "Ja";
-        } else {
-            x = "Nej";
-        }
-    }
 
 }

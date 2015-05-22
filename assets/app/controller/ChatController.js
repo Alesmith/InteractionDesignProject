@@ -29,6 +29,7 @@ function ChatController($scope, $sails, $rootScope,$location) {
     function update() {
         var exam = $scope.exams[$scope.currentChat];
         $sails.put('/v1/writtenExam/' + exam.id, exam).success(function () {
+            refresh();
         });
     }
 

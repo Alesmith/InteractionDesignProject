@@ -20,7 +20,7 @@
 
     <div class=" col-md-5 col-md-offset-1" id="setting-panels">
 
-        <form data-toggle="validator" role="form" id="settings-form">
+        <form data-toggle="validator" role="form" id="settings-form" ng-submit="update()">
             <div class='panel panel-info'>
 
                 <div class='panel-heading'>
@@ -87,8 +87,7 @@
                     <div class='panel-body'>
                         <div class="form-group">
                             <label for="inputPassword1">Nuvarande lösenord</label>
-                            <input type="password" class="form-control" id="inputPassword1" placeholder="Lösenord"
-                                   data-match="{{users.password}}">
+                            <input type="password" class="form-control" ng-model="pw" id="inputPassword1" placeholder="Lösenord">
                         </div>
 
 
@@ -101,7 +100,7 @@
                         <div class="form-group">
                             <label for="inputPassword3">Bekräfta det nya lösenordet</label>
                             <input type="password" class="form-control" id="inputPassword3" placeholder="Lösenord"
-                                   data-validation-matches-match="#inputPassword2"
+                                   data-validation-matches-match="inputPassword2"
                                    data-validation-matches-message="Lösenorden matchar inte varandra">
                         </div>
                     </div>
@@ -109,9 +108,9 @@
             </div>
 
             <div style="text-align: center;">
-                <button type="submit" class="btn btn-success" onclick="saveConf()" ng-click="update()">Spara ändringar
+                <button type="submit" class="btn btn-success">Spara ändringar
                 </button>
-                <button type="submit" onclick="dontSaveConf()" class="btn btn-danger">Avbryt</button>
+                <a href="#" style="position:relative; top:4px" ng-click="confirmCancel()">Avbryt</a>
             </div>
         </form>
     </div>

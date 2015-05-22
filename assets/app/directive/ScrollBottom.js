@@ -12,4 +12,4 @@ angular.module('alesmith').directive('scrollBottom', function () {
             });
         }
     }
-})
+});
