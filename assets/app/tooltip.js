@@ -10,4 +10,8 @@ $(document).tooltip({
     selector: '.save'
 });
 
+$(document).tooltip({
+    selector: '.problem'
+});
+
 
