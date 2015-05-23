@@ -52,19 +52,19 @@ function AppController($scope, $location, $http, $rootScope, $window) {
             },
             {
                 link: '/information/faq', text: 'Vanliga frågor (FAQ)'
+            },
+            {
+                link: '/information/contact', text: 'Kontaktinformation'
             }
 
         ]
     });
     $scope.menu.push({
-        title: "SUPPORT",
+        title: "HJÄLP",
         prefix: "support",
         links: [
             {
-                link: '/information/contact', text: 'Kontaktinformation'
-            },
-            {
-                link: '/support/help', text: 'Hjälp'
+                link: '/support/help', text: ''
             }
         ]
     });
