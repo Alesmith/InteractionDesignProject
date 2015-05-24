@@ -17,5 +17,3 @@ $(document).tooltip({
 $(document).tooltip({
     selector: '.not-working'
 });
-
-
