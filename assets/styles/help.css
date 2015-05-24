@@ -22,13 +22,11 @@
   padding-top: 40px;
 }
 
-
-
 #help-content .help-list { 
   margin-top: 30px;
   list-style: none;
-
 }
+
 #help-content .help-list ul { 
   font-family: Georgia, Times, serif; 
   font-size: 34px; 
@@ -91,23 +89,6 @@
     width: 700px;
 }
 
-#help-submenu h4{
-  padding-top: 20px;
-}
-
-/*
-#help-submenu {
-  border-top: 1px solid #e5e5e3;
-  padding-top: 40px;
-  margin-bottom: 20px;
-  font-size: 17px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 40px;
-
-
-}*/
-
 #help-submenu a,
 #help-content a {
   color: #4cadc0;
@@ -119,6 +100,7 @@
   padding-bottom: 30px;
   text-transform: uppercase;
   text-align: center;
+  padding-left: 50px;
 }
 
 #help-content .question {
@@ -127,4 +109,36 @@
 
 #help-content #last {
   padding-bottom: 100px;
+}
+
+#help-submenu .btn {
+  width: 100%;
+}
+
+#help-submenu h3{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#help-submenu #shortcuts{
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#help-submenu ul li {
+  margin-bottom: 20px;
+}
+
+#help-content .btn-default {
+  width: 30%;
+  margin-left: 250px;
+
+}
+
+#help-submenu h4 {
+
 }

@@ -1,6 +1,6 @@
-<div class="help-page" data-spy="scroll" data-target="#help-submenu">
+<div class="help-page" data-spy="scroll" data-target="#help-submenu" data-offset="20">
  
-  <div class="main-content column col-md-9 white material" style="padding-bottom:30px;" id="help-content" >
+  <div class="main-content column col-md-9 white material" style="padding-bottom:30px;" id="help-content">
 
       <h1>Hjälp</h1>
 
@@ -50,6 +50,10 @@
           <p>Om ditt konto inte fungerar som det ska ber vi dig kontakta support hos orange. Kontaktuppgifter till orange. hittar du under menyalternativet <a href="/information/contacts">Information</a>.</p>
         </div></li>
       </ul>
+
+      <div class="nav nav-tabs nav-stacked">
+        <a class="btn btn-default" role="button" onclick="javascript:window.location.reload()">Tillbaka upp</a>
+      </div>
 
       <h2 id="sec2">Tentamen</h2>
 
@@ -103,6 +107,10 @@
         </div></li>
       </ul>
 
+      <div class="nav nav-tabs nav-stacked ">
+        <a class="btn btn-default" role="button" onclick="javascript:window.location.reload()">Tillbaka upp</a>
+      </div>
+
       <h2 id="sec3">Meddelanden</h2>
 
       <ul class="help-list">
@@ -121,6 +129,10 @@
         </div></li>
       </ul>
 
+      <div class="nav nav-tabs nav-stacked ">
+        <a class="btn btn-default" role="button" onclick="javascript:window.location.reload()">Tillbaka upp</a>
+      </div>
+
       <h2 id="sec4">Information</h2>
 
       <ul class="help-list">
@@ -134,19 +146,29 @@
           <p>Alla kontaktuppgifter finns under menyalternativet <a href="/information/contact">Information</a>.</p>
         </div><li>
       </ul> 
-      <div id="last"></div>
+
+      <div class="nav nav-tabs nav-stacked ">
+        <a class="btn btn-default" role="button" onclick="javascript:window.location.reload()">Tillbaka upp</a>
+      </div>
 
   </div>
 
-  <div class="material white column col-md-3 sticky" id="help-submenu">
-    <h2>Klicka på en av kategorierna nedan för att snabbt ta dig till din fråga</h2>
+  <div class="material white column col-md-3" id="help-submenu">
+    <h3>Hjälpkategorier</h3> 
 
-    <ul class="nav nav-tabs nav-stacked affix-top" data-spy="affix" data-offset-top="125">
-      <li><a href="#sec1" class="btn btn-default">Ditt konto</a></li> 
-      <li><a href="#sec2" class="btn btn-default">Tentamen</a></li>
-      <li><a href="#sec3" class="btn btn-default">Meddelanden</a></li>
-      <li><a href="#sec4" class="btn btn-default">Information</a></li>
-    </ul>
+    <div class="nav nav-tabs nav-stacked" id="scrollspy">
+      <a href="#sec1" onClick="window.location.href=window.location.href" class="btn btn-default" role="button" >Ditt konto</a>
+      <br><br>
+      <a href="#sec2" onClick="window.location.href=window.location.href" class="btn btn-default" role="button">Tentamen</a>
+      <br><br>
+      <a href="#sec3" onClick="window.location.href=window.location.href" class="btn btn-default" role="button">Meddelanden</a>
+      <br><br>
+      <a href="#sec4" onClick="window.location.href=window.location.href" class="btn btn-default" role="button">Information</a>
+      <br><br>
+    </div>
+
 
   </div>
+
+
 </div>

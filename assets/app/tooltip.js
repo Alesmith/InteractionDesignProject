@@ -14,4 +14,8 @@ $(document).tooltip({
     selector: '.problem'
 });
 
+$(document).tooltip({
+    selector: '.not-working'
+});
+
 

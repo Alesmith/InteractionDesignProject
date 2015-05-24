@@ -64,7 +64,7 @@ function AppController($scope, $location, $http, $rootScope, $window) {
         prefix: "support",
         links: [
             {
-                link: '/support/help', text: ''
+                link: '/support/help#help-content', text: ''
             }
         ]
     });

@@ -77,6 +77,10 @@
   width: 450px;
 }
 
+#settings .password-panel {
+  cursor:not-allowed;
+}
+
 #settings .panel .panel-heading {
   background-image: none;
   background: rgba(75,172,198,0.9);
