@@ -85,10 +85,10 @@ var exams = [
     examinator: "Kjell Engberg"
   }];
 var users = [{
-  username: "gusfaraal", password: "123123",
+  username: "gusfrikar", password: "123123",
   name: "Fridolf Karlsson",
   birthday: "1994-08-09-2343",
-  email:"gusfaraal@gu.student.se"
+  email:"gusfrikar@gu.student.se"
 }];
 module.exports.bootstrap = function (cb) {
   // It's very important to trigger this callback method when you are finished
