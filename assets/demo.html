@@ -1,0 +1,404 @@
+<!doctype html>
+<html ng-app="a">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script>
+        angular.module("a", []).controller("MainController", function ($http, $scope) {
+            $scope.Date = function () {
+                return new Date().toISOString();
+            };
+            $scope.addUser = function () {
+                $http.post("/v1/user", $scope.newUser).success(refreshAlert);
+            };
+            $scope.createExam = function () {
+                $http.post("/v1/exam", $scope.newExam).success(refreshAlert);
+            };
+
+            $scope.updateUser = function () {
+                var user = $scope.selectedUser;
+                $http.put("/v1/user/" + user.id, user).success(refreshAlert);
+            };
+            $scope.updateWrittenExam = function () {
+                var writtenExam = $scope.writtenExam[0];
+                $http.put("/v1/writtenExam/" + writtenExam.id, writtenExam).success(refreshAlert);
+            };
+            $scope.doExam = function (newWrittenExam,selectedUser,selectedExam) {
+                newWrittenExam.writtenBy=selectedUser.id;
+                newWrittenExam.metaData=selectedExam.id;
+                $http.post("/v1/writtenExam", $scope.newWrittenExam).success(refreshAlert).error(console.log);
+            };
+            refresh();
+            function refresh() {
+                $http.get('/v1/user').success(function (users) {
+                    $scope.users = users;
+                });
+                $http.get('/v1/exam').success(function (exams) {
+                    $scope.exams = exams;
+                });
+
+            }
+
+            function refreshAlert() {
+                refresh();
+                alert("Requesting All Data");
+            }
+
+            $scope.find = function (arr, id) {
+                for (var key in arr) {
+                    var value = arr[key];
+                    try {
+                        if (value.id === id) {
+                            return value;
+                        }
+                    } catch (e) {
+
+                    }
+                }
+                return null;
+            }
+            $scope.countPoints = function (writtenExam) {
+
+                try {
+                    var count = 0;
+                    for (var key in writtenExam.answers) {
+                        var value = writtenExam.answers[key];
+                        if (value.points) {
+                            count += parseInt(value.points);
+                            console.log("hello worlds", value, count);
+                        }
+                    }
+                    return count;
+                }
+                catch (e) {
+
+                }
+                return 0;
+            }
+        })
+
+    </script>
+    <style>
+        .question textarea {
+            width: 100%;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding-top: 60px;
+            margin-top: -60px;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 0;
+        }
+
+        .block {
+            display: inline-block;
+            width: 25%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-left: 1.5%;
+            padding-left: 2.5%;
+            margin-right: 1.5%;
+            padding-right: 2.5%;
+            border: 1px solid black;
+        }
+
+        .block h2 {
+            border-bottom: 1px solid lightgray;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            position: fixed;
+            background: gray;
+            width: 100%;
+            height: 50px;
+        }
+
+        input {
+            width: 50%;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<div ng-controller="MainController">
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#users">Användare</a>
+                <a href="#writtenExam">Skrivna Tentor</a>
+                <a href="#exam">Tentamen</a>
+                <a href="#chat">Chat</a>
+            </li>
+        </ul>
+    </div>
+    <div style="padding-top:60px;"></div>
+    <div class="page" id="users">
+        <h1>
+            Användare:
+        </h1>
+
+        <div class="block">
+            <h2>
+                Lägg till användare
+            </h2>
+
+            <div>
+                <input placeholder="username" ng-model="newUser.username">
+            </div>
+            <div>
+                <input placeholder="password" ng-model="newUser.password">
+            </div>
+            <div>
+                <input placeholder="name" ng-model="newUser.name">
+            </div>
+            <div>
+                <input placeholder="email" ng-model="newUser.email">
+            </div>
+            <div>
+                <input placeholder="birthday YYYY-MM-DD-XXXX" ng-model="newUser.birthday">
+            </div>
+            <div>
+                <input type="submit" value="Lägg till användare" ng-click="addUser()">
+            </div>
+        </div>
+        <div class="block">
+            <h2>
+                Edit
+            </h2>
+            <select ng-options="user.username for user in users track by user.id" ng-model="selectedUser">
+
+            </select>
+
+            <div>
+                <input placeholder="username" ng-model="selectedUser.username">
+            </div>
+            <div>
+                <input placeholder="password" ng-model="selectedUser.password">
+            </div>
+            <div>
+                <input placeholder="name" ng-model="selectedUser.name">
+            </div>
+            <div>
+                <input placeholder="email" ng-model="selectedUser.email">
+            </div>
+            <div>
+                <input placeholder="birthday YYYY-MM-DD-XXXX" ng-model="selectedUser.birthday">
+            </div>
+            <div>
+                <input type="submit" value="Ändra" ng-click="updateUser()">
+            </div>
+        </div>
+    </div>
+    <div class="page" id="writtenExam">
+        <h1>
+            Skrivna Tentor
+        </h1>
+
+        <div class="block">
+            <h2>
+                Gör en tenta
+            </h2>
+
+            <div>
+                <label>
+                    Användare:
+                    <select multiple ng-options="user.username for user in users track by user.id"
+                            ng-model="selectedUser"></select>
+                </label>
+
+            </div>
+            <div>
+                <label>
+                    Tentamen:
+                    <select multiple ng-options="exam.name for exam in exams track by exam.id"
+                            ng-model="selectedExam"></select>
+                </label>
+            </div>
+            <div ng-show="selectedExam">
+                <div>
+                    Max poäng på tenta
+                    <b>{{selectedExam[0].maxPoints}}</b>
+                </div>
+                <div ng-init="newWrittenExam={}">
+                    <label>
+                        Betyg
+
+                        <select ng-model="newWrittenExam.grade">
+                            <option></option>
+                            <option>U</option>
+                            <option>G</option>
+                            <option>VG</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="question" ng-repeat="question in selectedExam[0].questions">
+                    <h4>
+                        {{question.data}}
+                    </h4>
+
+                    <div>
+                        <label>
+                            Svar:
+                            <textarea ng-model="newWrittenExam.answers[$index].data"></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Poäng max({{question.points}})
+                            <input ng-model="newWrittenExam.answers[$index].points">
+                        </label>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <button ng-click="doExam(newWrittenExam,selectedUser[0],selectedExam[0])">Lägg till</button>
+        </div>
+        <div class="block">
+            <h2>
+                Ändra en skrivning
+            </h2>
+
+            <div>
+                <label>
+                    Användare:
+                    <select ng-options="user.username for user in users track by user.id"
+                            multiple
+                            ng-model="selectedUser"></select>
+                </label>
+
+            </div>
+            <div>
+                <label>
+                    Tentamen:
+                    <select ng-options="writtenExam.id for writtenExam in selectedUser[0].writtenExams track by writtenExam.id"
+                            multiple
+                            ng-model="writtenExam"
+                            ng-click="selectedExam=find(exams,writtenExam[0].metaData); writtenExam[0].points=countPoints(writtenExam[0]);"></select>
+                </label>
+            </div>
+            <div ng-if="writtenExam">
+                <div>
+                    {{selectedExam.name}}
+                </div>
+                <div>
+                    Poäng:
+                    <input ng-model="writtenExam[0].points">
+                    <b>{{selectedExam.maxPoints}}</b>
+                </div>
+                <div>
+                    <label>
+                        Betyg
+                        <select ng-model="writtenExam[0].grade">
+                            <option></option>
+                            <option>U</option>
+                            <option>G</option>
+                            <option>VG</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    Deadline för rättning:
+                    <label>
+                        {{selectedExam.date}}
+                    </label>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="question" ng-repeat="question in selectedExam.questions" ng-init="outer=$index">
+                    <h4>
+                        {{question.data}}
+                    </h4>
+
+                    <div>
+                        <label>
+                            Svar:
+                            <textarea ng-model="writtenExam[0].answers[$index].data"></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Poäng max({{question.points}})
+                            <input ng-model="writtenExam[0].answers[$index].points">
+                        </label>
+                    </div>
+
+                    <div ng-init="writtenExam[0].answers[outer].comments = writtenExam[0].answers[outer].comments || []">
+                        <div ng-repeat="comment in writtenExam[0].answers[outer].comments">
+                            Kommentar {{$index+1}}:
+                            <div><label>
+                                Text:
+                                <input ng-model="comment.data">
+                            </label>
+                            </div>
+                            <div>
+                                <label>
+                                    Färg:
+                                    <input ng-model="comment.color">
+                                </label>
+                            </div>
+                        </div>
+                        <button ng-click="writtenExam[0].answers[outer].comments.push({})" )>Lägg till kommentar
+                        </button>
+                    </div>
+
+                    <hr>
+                </div>
+            </div>
+            <button ng-click="updateWrittenExam()">Ändra</button>
+        </div>
+
+    </div>
+    <div class="page" id="exam">
+        <h1>
+            Tentor
+        </h1>
+
+        <div class="block">
+            <h2>
+                Lägg till ny tentamen
+            </h2>
+
+            <div>
+                <input ng-model="newExam.courseCode" placeholder="Kurskod">
+                <input ng-model="newExam.name" placeholder="Kursnamn">
+                <input ng-model="newExam.points" placeholder="Kurspoäng">
+                <input ng-init="newExam.date = Date();" ng-model="newExam.date">
+                <input ng-model="newExam.examinator" placeholder="Kursexaminator">
+
+                <div ng-init="newExam.questions=[]">
+                    Frågor:
+                    <button ng-click="newExam.questions.push({});">Lägg till fråga</button>
+                    <div ng-repeat="question in newExam.questions">
+                        <div>
+                            Text: <input ng-model="question.data">
+                        </div>
+                        <div>
+                            Poäng: <input ng-model="question.points">
+                        </div>
+                    </div>
+                </div>
+                <button ng-click="createExam()">Lägg till examen</button>
+            </div>
+        </div>
+    </div>
+    <div class="page" id="chat">
+
+    </div>
+</div>
+</body>
+</html>
