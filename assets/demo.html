@@ -34,6 +34,15 @@
                 newWrittenExam.metaData = selectedExam.id;
                 $http.post("/v1/writtenExam", $scope.newWrittenExam).success(refreshAlert).error(console.log);
             };
+            $scope.sendChat = function (chatText, writtenExamZ,fromUs) {
+                console.log(chatText,writtenExamZ,fromUs);
+                $http.get('/v1/writtenExam/'+writtenExamZ.id).success(function (writtenExam) {
+                    writtenExam.chat=writtenExam.chat || [];
+                    writtenExam.chat.push({data:chatText,fromUs:fromUs});
+
+                    $http.post("/v1/writtenExam/" + writtenExam.id, writtenExam).error(console.log);
+                })
+            };
             refresh();
             function refresh() {
                 $http.get('/v1/user').success(function (users) {
@@ -453,7 +462,32 @@
         </div>
     </div>
     <div class="page" id="chat">
+        <h1>Chatt</h1>
 
+        <div class="block">
+            <h2>Skicka meddelande som användare</h2>
+            <select ng-options="chatUser.username for chatUser in users track by chatUser.id" multiple
+                    ng-model="selectedChatUser"></select>
+            <select ng-options="chatExam.id for chatExam in selectedChatUser[0].writtenExams track by chatExam.id"
+                    multiple ng-model="selectedChatExam"></select>
+
+            <form ng-submit="sendChat(chatText,selectedChatExam[0],true);chatText='';">
+                <input ng-model="chatText">
+                <button>Skicka!</button>
+            </form>
+        </div>
+        <div class="block">
+            <h2>Skicka meddelande som Kursansvarig</h2>
+            <select ng-options="chatUser.username for chatUser in users track by chatUser.id" multiple
+                    ng-model="selectedChatUser"></select>
+            <select ng-options="chatExam.id for chatExam in selectedChatUser[0].writtenExams track by chatExam.id"
+                    multiple ng-model="selectedChatExam"></select>
+
+            <form ng-submit="sendChat(chatText2,selectedChatExam[0],false);chatText2='';">
+                <input ng-model="chatText2">
+                <button>Skicka!</button>
+            </form>
+        </div>
     </div>
 </div>
 </body>
