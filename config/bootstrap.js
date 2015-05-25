@@ -53,7 +53,7 @@ var writtenExam = [
     {
         metaData: 2,
         writtenBy: 1,
-        points: 60,
+        points: 40,
         anonCode: "FJWEqAS",
         grade: "G",
         answers: [{
